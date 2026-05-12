@@ -3,42 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PhD Physics Researcher</title>
+  <title>Physics PhD Portfolio</title>
 
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #f7f7f7;
+      background: #f4f6f8;
       color: #222;
     }
 
-    header {
-      background: #1f3b57;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 10px 0 5px 0;
-      font-size: 2.2em;
-    }
-
-    header img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid white;
-    }
-
+    /* Navigation bar */
     nav {
-      background: #0f2233;
+      background: #1f2a44;
+      padding: 12px;
       text-align: center;
-      padding: 10px;
     }
 
     nav a {
@@ -52,124 +31,80 @@
       text-decoration: underline;
     }
 
-    section {
+    /* Header section */
+    .header {
+      text-align: center;
+      padding: 40px 20px;
+      background: white;
+    }
+
+    .header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #1f2a44;
+    }
+
+    .header h1 {
+      margin-top: 15px;
+      font-size: 28px;
+    }
+
+    .header p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    /* Content section */
+    .content {
       max-width: 900px;
       margin: 30px auto;
       background: white;
-      padding: 20px;
+      padding: 25px;
       border-radius: 10px;
     }
 
-    h2 {
-      color: #1f3b57;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #1f3b57;
-      color: white;
-      margin-top: 40px;
-    }
-
-    .about-container {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .about-container img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-
-    @media (max-width: 700px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
   </style>
 </head>
 
 <body>
 
-<header>
-  <img src="image.jpg" alt="My Photo">
-  <h1>Keshav</h1>
-  <p>PhD Student | Experimental Nuclear Physics | Texas A&M University</p>
-</header>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="homework.html">Homework</a>
+    <a href="slides.html">Slides</a>
+  </nav>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#research">Research</a>
-  <a href="#publications">Publications</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <!-- Header with image -->
+  <div class="header">
 
-<section id="about">
-  <h2>About Me</h2>
-    <p>
-      I am a PhD student in Physics working on Experimental High Energy Physics.
-      My research focuses on detector development, data analysis, and nuclear physics.
-      I am particularly interested in experimental techniques and instrumentation
-      used in modern nuclear and particle physics experiments.
-    </p>
-</section>
+    <!-- YOUR IMAGE (put file in same folder as index.html) -->
+    <img src="myphoto.jpg" alt="My Photo">
 
-<section id="research">
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Experimental Nuclear Physics</li>
-    <li>Detector Development (GEM, Silicon, etc.)</li>
-    <li>Data Analysis and Simulation (GEANT4, ROOT)</li>
-    <li>Astrophysical Nuclear Reactions</li>
-  </ul>
-</section>
-
-<section id="publications">
-  <h2>Publications</h2>
-  <ul>
-    <li>Author et al., Journal Name (Year)</li>
-    <li>Author et al., Conference Proceedings (Year)</li>
-  </ul>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-
-  <div class="grid">
-    <div>
-      <h3>Detector Simulation</h3>
-      <p>Work on electromagnetic simulations and detector optimization.</p>
-    </div>
-
-    <div>
-      <h3>Data Analysis</h3>
-      <p>Analysis of experimental nuclear physics data using ROOT and Python.</p>
-    </div>
+    <h1>Your Name</h1>
+    <p>PhD Student in Physics | Nuclear Physics | Experimental Research</p>
   </div>
-</section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: keshav2001@tamu.edu</p>
-  <p>Office: Physics Department, Texas A&M University</p>
-  <p>GitHub / Google Scholar / ORCID links</p>
-</section>
+  <!-- About section -->
+  <div class="content">
+    <h2>About Me</h2>
+    <p>
+      I am a Physics PhD student working in experimental nuclear physics.
+      My interests include ion traps, nuclear structure, and data analysis
+      from cyclotron-based experiments.
+    </p>
 
-<footer>
-  <p>© 2026 Your Name | Academic Portfolio</p>
-</footer>
+    <h2>Research Interests</h2>
+    <ul>
+      <li>Penning Traps</li>
+      <li>Time-of-Flight Mass Spectrometry</li>
+      <li>Nuclear Astrophysics</li>
+      <li>Rare Isotope Studies</li>
+    </ul>
+  </div>
 
 </body>
 </html>
