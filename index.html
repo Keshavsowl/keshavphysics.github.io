@@ -3,121 +3,490 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Physics PhD Portfolio</title>
-
+  <title>Keshav — Physics PhD Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:     #0e1117;
+      --paper:   #f5f2ec;
+      --cream:   #ede9e0;
+      --navy:    #1a2540;
+      --gold:    #c8a84b;
+      --dim:     #6b6860;
+      --rule:    rgba(14,17,23,0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-      color: #222;
+      font-family: 'Outfit', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    /* Navigation bar */
+    /* ── Noise grain overlay ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.6;
+    }
+
+    /* ── Nav ── */
     nav {
-      background: #1f2a44;
-      padding: 12px;
-      text-align: center;
+      position: sticky; top: 0; z-index: 100;
+      background: var(--navy);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px;
+      height: 56px;
+      border-bottom: 1px solid rgba(200,168,75,0.25);
     }
 
-    nav a {
-      color: white;
-      margin: 0 15px;
+    .nav-brand {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      text-transform: uppercase;
       text-decoration: none;
-      font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .nav-links { display: flex; gap: 36px; }
+    .nav-links a {
+      color: rgba(245,242,236,0.7);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── Hero ── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: calc(100vh - 56px);
+      max-height: 800px;
     }
 
-    /* Header section */
-    .header {
-      text-align: center;
-      padding: 40px 20px;
-      background: white;
+    .hero-left {
+      background: var(--navy);
+      display: flex;
+      align-items: flex-end;
+      padding: 64px 56px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .header img {
-      width: 160px;
-      height: 160px;
+    /* Decorative atom rings */
+    .hero-left::before {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
       border-radius: 50%;
+      border: 1px solid rgba(200,168,75,0.12);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      animation: spin 30s linear infinite;
+    }
+    .hero-left::after {
+      content: '';
+      position: absolute;
+      width: 420px; height: 420px;
+      border-radius: 50%;
+      border: 1px solid rgba(200,168,75,0.08);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      animation: spin 20s linear infinite reverse;
+    }
+    @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+    .hero-text { position: relative; z-index: 2; }
+
+    .hero-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 32px; height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(52px, 6vw, 80px);
+      font-weight: 300;
+      color: var(--paper);
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(245,242,236,0.55);
+      line-height: 1.7;
+      max-width: 320px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-right {
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 64px;
+      position: relative;
+    }
+
+    .photo-frame {
+      position: relative;
+    }
+    .photo-frame::before {
+      content: '';
+      position: absolute;
+      inset: -12px -12px 12px 12px;
+      border: 1px solid var(--gold);
+      opacity: 0.4;
+      z-index: 0;
+    }
+
+    .hero-photo {
+      width: 240px; height: 300px;
       object-fit: cover;
-      border: 3px solid #1f2a44;
+      display: block;
+      position: relative; z-index: 1;
+      filter: grayscale(15%);
     }
 
-    .header h1 {
-      margin-top: 15px;
-      font-size: 28px;
+    /* Placeholder if no image */
+    .photo-placeholder {
+      width: 240px; height: 300px;
+      background: linear-gradient(160deg, #2a3a5c 0%, #1a2540 100%);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      position: relative; z-index: 1;
+      color: rgba(200,168,75,0.6);
+    }
+    .photo-placeholder svg { width: 64px; opacity: 0.4; }
+    .photo-placeholder span {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      margin-top: 12px;
+      text-transform: uppercase;
+      opacity: 0.5;
     }
 
-    .header p {
-      color: #555;
+    /* ── Main content ── */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 80px 40px 120px;
+    }
+
+    /* Section styling */
+    section { margin-bottom: 72px; animation: fadeUp 0.6s ease both; }
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.2s; }
+    section:nth-child(4) { animation-delay: 0.3s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-header {
+      display: flex; align-items: center; gap: 20px;
+      margin-bottom: 36px;
+    }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .section-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    /* About */
+    .about-text {
       font-size: 16px;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--dim);
+      max-width: 640px;
     }
 
-    /* Content section */
-    .content {
-      max-width: 900px;
-      margin: 30px auto;
+    /* Cards grid */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
       background: white;
-      padding: 25px;
-      border-radius: 10px;
+      border: 1px solid var(--rule);
+      padding: 28px 28px 24px;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: default;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 0;
+      background: var(--gold);
+      transition: height 0.3s ease;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(0,0,0,0.07); }
+    .card:hover::before { height: 100%; }
+
+    .card-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: rgba(200,168,75,0.6);
+      margin-bottom: 12px;
     }
 
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .card-sub {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--dim);
+      line-height: 1.5;
+    }
+
+    /* Hobby list */
+    .hobby-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .hobby-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--dim);
+      transition: color 0.2s;
+    }
+    .hobby-item:hover { color: var(--navy); }
+    .hobby-item:first-child { border-top: 1px solid var(--rule); }
+
+    .hobby-icon {
+      font-size: 18px;
+      width: 28px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      text-align: center;
+      padding: 32px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: rgba(245,242,236,0.3);
+      text-transform: uppercase;
+    }
+
+    /* Responsive */
+    @media (max-width: 680px) {
+      .hero { grid-template-columns: 1fr; max-height: none; }
+      .hero-left { padding: 48px 32px; min-height: 340px; }
+      .hero-right { padding: 48px 32px; }
+      nav { padding: 0 24px; }
+      .nav-brand { display: none; }
+      main { padding: 60px 24px 80px; }
+    }
   </style>
 </head>
-
 <body>
+
   <!-- Navigation -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="blog.html">Blog</a>
-    <a href="homework.html">Homework</a>
-    <a href="slides.html">Slides</a>
+    <a class="nav-brand" href="index.html">K. / Physics</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="homework.html">Homework</a>
+      <a href="slides.html">Slides</a>
+    </div>
   </nav>
 
-  <!-- Header with image -->
-  <div class="header">
-
-    <!-- YOUR IMAGE (put file in same folder as index.html) -->
-    <img src="image.jpg" alt="My Photo">
-
-    <h1>Keshav</h1>
-    <p>PhD Student in Physics | Particle and Nuclear Physics | Experimental Research</p>
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-text">
+        <div class="hero-eyebrow">PhD Candidate</div>
+        <h1 class="hero-name">Keshav</h1>
+        <p class="hero-title">
+          Experimental Nuclear Physics &mdash; Penning Traps, Mass Spectrometry &amp; Rare Isotope Studies
+          at Texas A&amp;M University
+        </p>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="photo-frame">
+        <!-- If image.jpg exists, it will show; otherwise the placeholder renders -->
+        <img class="hero-photo" src="image.jpg" alt="Photo of Keshav"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="photo-placeholder" style="display:none;">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="22" r="12" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 56c0-13.255 10.745-24 24-24s24 10.745 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span>image.jpg</span>
+        </div>
+      </div>
+    </div>
   </div>
-  
-  <!-- About section -->
-  <div class="content">
-    <h2>About Me</h2>
-    <p>
-      I am a Physics PhD student working in experimental nuclear physics.
-      My interests include ion traps, nuclear structure, and data analysis
-      from cyclotron-based experiments.
-    </p>
-    
-    <h2> Educationl Background </h2>
-    <ul>
-      <li>Graduate Student at Texas A&M Univeristy</li>
-      <li>MSc Physics Panjab Uiversity Chandigarh</li>
-      <li>BSc Physics Panjab Univeristy Chandigarh</li>
-    </ul>
-    
-    <h2> Hobbies
-     <ul>
-       <li>Reading Philosophy</li>
-       <li>Walking with Friends, Sometime in my own solidute</li>
-       <li>Badminton</li>
-     </ul> 
-      
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Penning Traps</li>
-      <li>Time-of-Flight Mass Spectrometry</li>
-      <li>Nuclear Astrophysics</li>
-      <li>Rare Isotope Studies</li>
-    </ul>
-  </div>
+
+  <!-- Main content -->
+  <main>
+
+    <!-- About -->
+    <section>
+      <div class="section-header">
+        <span class="section-label">01 — About</span>
+        <div class="section-rule"></div>
+      </div>
+      <h2 class="section-title">About Me</h2>
+      <p class="about-text">
+        I am a Physics PhD student working in experimental nuclear physics.
+        My interests span ion traps, nuclear structure, and data analysis
+        from cyclotron-based experiments. I am passionate about probing
+        the fundamental properties of rare isotopes and their role in
+        stellar nucleosynthesis.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <div class="section-header">
+        <span class="section-label">02 — Education</span>
+        <div class="section-rule"></div>
+      </div>
+      <h2 class="section-title">Academic Background</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-num">01</div>
+          <div class="card-title">Texas A&amp;M University</div>
+          <div class="card-sub">PhD in Physics &mdash; In Progress<br>College Station, TX</div>
+        </div>
+        <div class="card">
+          <div class="card-num">02</div>
+          <div class="card-title">Panjab University</div>
+          <div class="card-sub">MSc in Physics<br>Chandigarh, India</div>
+        </div>
+        <div class="card">
+          <div class="card-num">03</div>
+          <div class="card-title">Panjab University</div>
+          <div class="card-sub">BSc in Physics<br>Chandigarh, India</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section>
+      <div class="section-header">
+        <span class="section-label">03 — Research</span>
+        <div class="section-rule"></div>
+      </div>
+      <h2 class="section-title">Research Interests</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-num">01</div>
+          <div class="card-title">Penning Traps</div>
+          <div class="card-sub">High-precision mass measurements of exotic nuclei using electromagnetic confinement</div>
+        </div>
+        <div class="card">
+          <div class="card-num">02</div>
+          <div class="card-title">Time-of-Flight Mass Spectrometry</div>
+          <div class="card-sub">Characterizing isotopes through precision flight-time measurements</div>
+        </div>
+        <div class="card">
+          <div class="card-num">03</div>
+          <div class="card-title">Nuclear Astrophysics</div>
+          <div class="card-sub">Understanding the origin of heavy elements via the r-process in neutron stars</div>
+        </div>
+        <div class="card">
+          <div class="card-num">04</div>
+          <div class="card-title">Rare Isotope Studies</div>
+          <div class="card-sub">Probing the limits of nuclear stability at exotic facilities</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies -->
+    <section>
+      <div class="section-header">
+        <span class="section-label">04 — Life</span>
+        <div class="section-rule"></div>
+      </div>
+      <h2 class="section-title">Hobbies</h2>
+      <div class="hobby-list">
+        <div class="hobby-item"><span class="hobby-icon">📖</span> Reading Philosophy</div>
+        <div class="hobby-item"><span class="hobby-icon">🚶</span> Walking — with friends, or in quiet solitude</div>
+        <div class="hobby-item"><span class="hobby-icon">🏸</span> Badminton</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2026 &nbsp;&mdash;&nbsp; Keshav &nbsp;&mdash;&nbsp; Texas A&amp;M University
+  </footer>
 
 </body>
 </html>
