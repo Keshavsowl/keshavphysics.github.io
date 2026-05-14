@@ -1,0 +1,105 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      3120,         97]
+NotebookOptionsPosition[      2729,         82]
+NotebookOutlinePosition[      3164,         99]
+CellTagsIndexPosition[      3121,         96]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[Cell[BoxData[{
+ FormBox[
+  RowBox[{"Kinetic", " ", "energy", " ", "of", " ", "the", " ", "particle"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"K", "(", "\[Infinity]", ")"}], " ", "+", " ", 
+    RowBox[{"V", "(", "\[Infinity]", ")"}]}], " ", "=", "  ", 
+   RowBox[{
+    RowBox[{"K", "(", "r", ")"}], " ", "+", " ", 
+    RowBox[{"V", "(", "R", ")"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"K", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "2"], "m", " ", 
+     SuperscriptBox["v", "2"]}], " ", "+", " ", 
+    RowBox[{"V", "(", "r", ")"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"K", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "2"], "m", " ", 
+     SuperscriptBox[
+      OverscriptBox["r", "."], "2"]}], " ", "+", " ", 
+    RowBox[{"V", "(", "r", ")"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+  "differentiating", " ", "both", " ", "side", " ", "with", " ", "respect", " ",
+    "to", " ", "t"}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"0", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"m", " ", 
+     OverscriptBox["r", "."], " ", 
+     OverscriptBox["r", ".."]}], "+", " ", 
+    RowBox[{
+     FractionBox["dV", "dr"], 
+     OverscriptBox["r", "."]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    OverscriptBox["r", ".."], "(", "t", ")"}], " ", "=", 
+   RowBox[{
+    RowBox[{"-", " ", 
+     FractionBox["1", "m"]}], 
+    FractionBox["dV", "dr"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+   "According", " ", "to", " ", "Larmor", " ", "formula", " ", "power"}], " ",
+    "\[IndentingNewLine]"}], TraditionalForm], "\[IndentingNewLine]"
+ FormBox[, TraditionalForm]}],
+ FormatType->
+  TraditionalForm,ExpressionUUID->"9e9378fe-38e4-cd4c-8618-b6d4b8183827"]], \
+"Text",
+ CellChangeTimes->{{3.971819070837965*^9, 3.9718190770631447`*^9}, {
+  3.9718191149031467`*^9, 3.9718193517243576`*^9}, {3.971819384061632*^9, 
+  3.9718194028799324`*^9}},ExpressionUUID->"14fc0306-68e9-af46-b8df-\
+980eb60fa9c9"]
+},
+WindowSize->{1152, 579.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"d8560530-a850-4242-b033-8aab40750dcb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 2171, 60, 263, "Text",ExpressionUUID->"14fc0306-68e9-af46-b8df-980eb60fa9c9"]
+}
+]
+*)
+

@@ -1,0 +1,488 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     15185,        480]
+NotebookOptionsPosition[     14699,        464]
+NotebookOutlinePosition[     15134,        481]
+CellTagsIndexPosition[     15091,        478]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ StyleBox["Question ",
+  FontWeight->"Bold"],
+ Cell[BoxData[
+  FormBox["1", TraditionalForm]],
+  FormatType->TraditionalForm,
+  FontWeight->"Bold",ExpressionUUID->"0a1d8ebf-2219-394d-9ba7-c42bbfcc7912"],
+ "\n",
+ StyleBox[" Show ",
+  FontWeight->"Bold"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["w", 
+    RowBox[{"k", " "}]], TraditionalForm]],
+  FormatType->TraditionalForm,
+  FontWeight->"Bold",ExpressionUUID->"75a784b1-6513-ce4b-b370-7ee1676527e8"],
+ StyleBox[" = ",
+  FontWeight->"Bold"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["w", "l"], TraditionalForm]],
+  FormatType->TraditionalForm,
+  FontWeight->"Bold",ExpressionUUID->"f38fa1fa-8383-ae4b-9578-71bbf1e9f9c3"],
+ StyleBox[" for the optimal solution w if two attributes k and l are \
+identical i.e. ",
+  FontWeight->"Bold"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", 
+     RowBox[{"i", ",", "k"}]], "=", 
+    SubscriptBox["x", 
+     RowBox[{"i", ",", "l"}]]}], TraditionalForm]],
+  FormatType->TraditionalForm,
+  FontWeight->"Bold",ExpressionUUID->"e11241c1-3c05-6946-b783-0786f606db2b"],
+ StyleBox[" for any training example ",
+  FontWeight->"Bold"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "i"], TraditionalForm]],
+  FormatType->TraditionalForm,
+  FontWeight->"Bold",ExpressionUUID->"3960670b-82c7-bd47-b155-80938c7e830f"]
+}], "Text",
+ CellChangeTimes->{{3.9720681585002537`*^9, 3.9720681727611637`*^9}, {
+  3.9720684467240868`*^9, 
+  3.9720685589997463`*^9}},ExpressionUUID->"d9aa3026-4619-4f4f-a9fb-\
+99369824a784"],
+
+Cell[TextData[Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"L", "(", "w", ")"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox["C", "n"], 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"i", "=", "n"}], 
+        RowBox[{"i", "=", "n"}]], 
+       RowBox[{"ln", "(", 
+        RowBox[{"1", "+", 
+         RowBox[{"exp", "(", 
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox["y", "i"]}], " ", 
+           SubsuperscriptBox["x", "i", "T"], 
+           SubscriptBox["w", "i"]}], ")"}]}], ")"}]}]}], " ", "+", " ", 
+     FractionBox["1", "2"]}], "||", "w", 
+    SubsuperscriptBox["||", "2", "2"], "\[IndentingNewLine]", 
+    RowBox[{
+    "Let", " ", "us", " ", "now", " ", "differentiate", " ", "with", " ", 
+     "respect", " ", "to", " ", 
+     SubscriptBox["w", "k"]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   FractionBox[
+    RowBox[{"\[PartialD]", "L"}], 
+    RowBox[{"\[PartialD]", 
+     SubscriptBox["w", "k"]}]], " ", "=", "  ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox["C", "n"], 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"i", "=", "n"}], 
+        RowBox[{"i", "=", "n"}]], 
+       FractionBox[
+        RowBox[{
+         RowBox[{"exp", "(", 
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox["y", "i"]}], " ", 
+           SubsuperscriptBox["x", "i", "T"], 
+           SubscriptBox["w", "i"]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox["y", "i"]}], " ", 
+           SubscriptBox["x", "i"], 
+           SubscriptBox["\[Delta]", "ik"]}], ")"}]}], 
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          RowBox[{"exp", "(", 
+           RowBox[{
+            RowBox[{"-", 
+             SubscriptBox["y", "i"]}], " ", 
+            SubsuperscriptBox["x", "i", "T"], 
+            SubscriptBox["w", "i"]}], ")"}]}], ")"}]]}]}], "+", 
+     SubscriptBox["w", "k"]}], "=", 
+    RowBox[{
+     RowBox[{
+      FractionBox["C", "n"], 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"i", "=", "n"}], 
+        RowBox[{"i", "=", "n"}]], 
+       FractionBox[
+        RowBox[{
+         RowBox[{"exp", "(", 
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox["y", "i"]}], " ", 
+           SubsuperscriptBox["x", "i", "T"], 
+           SubscriptBox["w", "i"]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox["y", "i"]}], " ", 
+           SubscriptBox["x", 
+            RowBox[{"i", ",", "k"}]]}], ")"}]}], 
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          RowBox[{"exp", "(", 
+           RowBox[{
+            RowBox[{"-", 
+             SubscriptBox["y", "i"]}], " ", 
+            SubsuperscriptBox["x", "i", "T"], 
+            SubscriptBox["w", "i"]}], ")"}]}], ")"}]]}]}], "+", 
+     SubscriptBox["w", "k"]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+  "Similarly", " ", "let", " ", "is", " ", "now", " ", "differentiate", " ", 
+   "with", " ", "respect", " ", "to", " ", 
+   SubscriptBox["w", "l"]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", "L"}], 
+     RowBox[{"\[PartialD]", 
+      SubscriptBox["w", "l"]}]], " ", "=", "  ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       FractionBox["C", "n"], 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"i", "=", "n"}], 
+         RowBox[{"i", "=", "n"}]], 
+        FractionBox[
+         RowBox[{
+          RowBox[{"exp", "(", 
+           RowBox[{
+            RowBox[{"-", 
+             SubscriptBox["y", "i"]}], " ", 
+            SubsuperscriptBox["x", "i", "T"], 
+            SubscriptBox["w", "i"]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             SubscriptBox["y", "i"]}], " ", 
+            SubscriptBox["x", "i"], 
+            SubscriptBox["\[Delta]", "il"]}], ")"}]}], 
+         RowBox[{"(", 
+          RowBox[{"1", "+", 
+           RowBox[{"exp", "(", 
+            RowBox[{
+             RowBox[{"-", 
+              SubscriptBox["y", "i"]}], " ", 
+             SubsuperscriptBox["x", "i", "T"], 
+             SubscriptBox["w", "i"]}], ")"}]}], ")"}]]}]}], "+", " ", 
+      SubscriptBox["w", "l"]}], "=", 
+     RowBox[{
+      RowBox[{
+       FractionBox["C", "n"], 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"i", "=", "n"}], 
+         RowBox[{"i", "=", "n"}]], 
+        FractionBox[
+         RowBox[{
+          RowBox[{"exp", "(", 
+           RowBox[{
+            RowBox[{"-", 
+             SubscriptBox["y", "i"]}], " ", 
+            SubsuperscriptBox["x", "i", "T"], 
+            SubscriptBox["w", "i"]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             SubscriptBox["y", "i"]}], " ", 
+            SubscriptBox["x", 
+             RowBox[{"i", ",", "l"}]]}], ")"}]}], 
+         RowBox[{"(", 
+          RowBox[{"1", "+", 
+           RowBox[{"exp", "(", 
+            RowBox[{
+             RowBox[{"-", 
+              SubscriptBox["y", "i"]}], " ", 
+             SubsuperscriptBox["x", "i", "T"], 
+             SubscriptBox["w", "i"]}], ")"}]}], ")"}]]}]}], " ", "+", " ", 
+      SubscriptBox["w", "l"]}]}]}], "\[IndentingNewLine]"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"At", " ", "the", " ", "optimal", " ", "solution", " ", 
+    FractionBox[
+     RowBox[{"\[PartialD]", "L"}], 
+     RowBox[{"\[PartialD]", 
+      SubscriptBox["w", "k"]}]]}], " ", "=", 
+   RowBox[{
+    RowBox[{"0", "  ", "and", " ", "also", " ", 
+     FractionBox[
+      RowBox[{"\[PartialD]", "L"}], 
+      RowBox[{"\[PartialD]", 
+       SubscriptBox["w", "l"]}]]}], " ", "=", " ", "0"}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"Hence", " "}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     FractionBox["C", "n"], 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "n"}], 
+       RowBox[{"i", "=", "n"}]], 
+      FractionBox[
+       RowBox[{
+        RowBox[{"exp", "(", 
+         RowBox[{
+          RowBox[{"-", 
+           SubscriptBox["y", "i"]}], " ", 
+          SubsuperscriptBox["x", "i", "T"], 
+          SubscriptBox["w", "i"]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", 
+           SubscriptBox["y", "i"]}], " ", 
+          SubscriptBox["x", 
+           RowBox[{"i", ",", "k"}]]}], ")"}]}], 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{"exp", "(", 
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox["y", "i"]}], " ", 
+           SubsuperscriptBox["x", "i", "T"], 
+           SubscriptBox["w", "i"]}], ")"}]}], ")"}]]}]}], "+", 
+    SubscriptBox["w", "k"]}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "   ", "--"}], "--"}], 
+    RowBox[{"(", "1", ")"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     FractionBox["C", "n"], 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "n"}], 
+       RowBox[{"i", "=", "n"}]], 
+      FractionBox[
+       RowBox[{
+        RowBox[{"exp", "(", 
+         RowBox[{
+          RowBox[{"-", 
+           SubscriptBox["y", "i"]}], " ", 
+          SubsuperscriptBox["x", "i", "T"], 
+          SubscriptBox["w", "i"]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", 
+           SubscriptBox["y", "i"]}], " ", 
+          SubscriptBox["x", 
+           RowBox[{"i", ",", "l"}]]}], ")"}]}], 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{"exp", "(", 
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox["y", "i"]}], " ", 
+           SubsuperscriptBox["x", "i", "T"], 
+           SubscriptBox["w", "i"]}], ")"}]}], ")"}]]}]}], " ", "+", " ", 
+    SubscriptBox["w", 
+     RowBox[{"l", " "}]]}], "  ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"0", " ", "--"}], "--"}], "--"}], 
+    RowBox[{"(", "2", ")"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"It", " ", "is", " ", "given", " ", "that", " ", 
+    SubscriptBox["x", 
+     RowBox[{"i", ",", "k"}]]}], " ", "=", " ", 
+   SubscriptBox["x", 
+    RowBox[{"i", ",", "l"}]]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"Equating", " ", 
+   RowBox[{"(", "1", ")"}], " ", "and", " ", 
+   RowBox[{"(", "2", ")"}], " ", "as", " ", "both", " ", "are", " ", "equal", 
+   " ", "to", " ", "zero"}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox["C", "n"], 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"i", "=", "n"}], 
+        RowBox[{"i", "=", "n"}]], 
+       FractionBox[
+        RowBox[{
+         RowBox[{"exp", "(", 
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox["y", "i"]}], " ", 
+           SubsuperscriptBox["x", "i", "T"], 
+           SubscriptBox["w", "i"]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox["y", "i"]}], " ", 
+           SubscriptBox["x", 
+            RowBox[{"i", ",", "k"}]]}], ")"}]}], 
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          RowBox[{"exp", "(", 
+           RowBox[{
+            RowBox[{"-", 
+             SubscriptBox["y", "i"]}], " ", 
+            SubsuperscriptBox["x", "i", "T"], 
+            SubscriptBox["w", "i"]}], ")"}]}], ")"}]]}]}], "+", 
+     SubscriptBox["w", "k"]}], " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      FractionBox["C", "n"], 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"i", "=", "n"}], 
+        RowBox[{"i", "=", "n"}]], 
+       FractionBox[
+        RowBox[{
+         RowBox[{"exp", "(", 
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox["y", "i"]}], " ", 
+           SubsuperscriptBox["x", "i", "T"], 
+           SubscriptBox["w", "i"]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox["y", "i"]}], " ", 
+           SubscriptBox["x", 
+            RowBox[{"i", ",", "l"}]]}], ")"}]}], 
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          RowBox[{"exp", "(", 
+           RowBox[{
+            RowBox[{"-", 
+             SubscriptBox["y", "i"]}], " ", 
+            SubsuperscriptBox["x", "i", "T"], 
+            SubscriptBox["w", "i"]}], ")"}]}], ")"}]]}]}], " ", "+", " ", 
+     SubscriptBox["w", 
+      RowBox[{"l", " "}]]}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"Applying", " ", "the", " ", "condition", " ", 
+    SubscriptBox["x", 
+     RowBox[{"i", ",", "k"}]]}], " ", "=", " ", 
+   SubscriptBox["x", 
+    RowBox[{"i", ",", "l"}]]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"we", " ", "are", " ", "getting", "    ", 
+     SubscriptBox["w", "k"]}], " ", "=", " ", 
+    SubscriptBox["w", 
+     RowBox[{"l", " "}]]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"Hence", " ", "if", " ", 
+    StyleBox[
+     SubscriptBox["x", 
+      RowBox[{"i", ",", "k"}]],
+     FontWeight->"Bold"]}], 
+   StyleBox[" ",
+    FontWeight->"Bold"], 
+   StyleBox["=",
+    FontWeight->"Bold"], 
+   StyleBox[" ",
+    FontWeight->"Bold"], 
+   RowBox[{
+    StyleBox[
+     RowBox[{
+      SubscriptBox["x", 
+       RowBox[{"i", ",", "l"}]], " ", "\[Implies]", " ", 
+      SubscriptBox["w", "k"]}],
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["=",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    RowBox[{
+     StyleBox[
+      SubscriptBox["w", 
+       RowBox[{"l", " "}]],
+      FontWeight->"Bold"], 
+     StyleBox["  ",
+      FontWeight->"Bold"], "for", " ", "any", " ", "training", " ", "sample", 
+     " ", 
+     RowBox[{
+      SubscriptBox[
+       StyleBox["x",
+        FontWeight->"Bold"], "i"], "."}]}]}]}], TraditionalForm]}],
+ FormatType->
+  TraditionalForm,ExpressionUUID->"2b84f339-29a5-f141-820f-2f7e9d10b20c"]], \
+"Text",
+ CellChangeTimes->{{3.972068174401575*^9, 3.972068443263397*^9}, {
+  3.9720685628935986`*^9, 3.9720686747176495`*^9}, {3.972068760920248*^9, 
+  3.9720687719776363`*^9}, {3.9720689230004883`*^9, 3.972069121339184*^9}, {
+  3.972069196352707*^9, 3.9720693604299316`*^9}, {3.9720694462327576`*^9, 
+  3.9720695959032288`*^9}, {3.9720697887749176`*^9, 
+  3.972069794992893*^9}},ExpressionUUID->"c4c4758d-0e90-714f-ab40-\
+d1b7a4372970"]
+},
+WindowSize->{1152, 579.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"03641c16-8592-b640-8a4c-8c928aeb6fb6"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 1523, 46, 56, "Text",ExpressionUUID->"d9aa3026-4619-4f4f-a9fb-99369824a784"],
+Cell[2080, 68, 12615, 394, 496, "Text",ExpressionUUID->"c4c4758d-0e90-714f-ab40-d1b7a4372970"]
+}
+]
+*)
+

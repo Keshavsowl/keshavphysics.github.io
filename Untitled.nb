@@ -1,0 +1,312 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      9792,        304]
+NotebookOptionsPosition[      9247,        288]
+NotebookOutlinePosition[      9647,        304]
+CellTagsIndexPosition[      9604,        301]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[Cell[BoxData[{
+ FormBox[
+  RowBox[{"Kinetic", " ", "energy", " ", "of", " ", "the", " ", "particle"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"K", "(", "\[Infinity]", ")"}], " ", "+", " ", 
+    RowBox[{"V", "(", "\[Infinity]", ")"}]}], " ", "=", "  ", 
+   RowBox[{
+    RowBox[{"K", "(", "r", ")"}], " ", "+", " ", 
+    RowBox[{"V", "(", "R", ")"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"K", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "2"], "m", " ", 
+     SuperscriptBox["v", "2"]}], " ", "+", " ", 
+    RowBox[{"V", "(", "r", ")"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"K", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "2"], "m", " ", 
+     SuperscriptBox[
+      OverscriptBox["r", "."], "2"]}], " ", "+", " ", 
+    RowBox[{"V", "(", "r", ")"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+  "differentiating", " ", "both", " ", "side", " ", "with", " ", "respect", " ",
+    "to", " ", "t"}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"0", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"m", " ", 
+     OverscriptBox["r", "."], " ", 
+     OverscriptBox["r", ".."]}], "+", " ", 
+    RowBox[{
+     FractionBox["dV", "dr"], 
+     OverscriptBox["r", "."]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    OverscriptBox["r", ".."], "(", "t", ")"}], " ", "=", 
+   RowBox[{
+    RowBox[{"-", " ", 
+     FractionBox["1", "m"]}], 
+    FractionBox["dV", "dr"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+  "According", " ", "to", " ", "Larmor", " ", "formula", " ", "power"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"P", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox["2", "3"], " ", 
+      SuperscriptBox["q", "2"], 
+      SuperscriptBox["a", "2"]}], "  ", "\[Implies]", "P"}], " ", "=", " ", 
+    RowBox[{
+     FractionBox["2", "3"], " ", 
+     SuperscriptBox[
+      RowBox[{
+       SuperscriptBox["q", "2"], "(", " ", 
+       RowBox[{
+        FractionBox["1", "m"], 
+        FractionBox["dV", "dr"]}], ")"}], "2"]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"P", "=", " ", 
+    RowBox[{"-", 
+     FractionBox["dE", "dt"]}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"Changing", " ", "the", " ", "variable", " ", "to", " ", "r"}], 
+   "\[IndentingNewLine]"}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{" ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["dE", "dt"]}], " ", 
+     FractionBox["dr", "dr"]}], " ", "=", " ", 
+    RowBox[{
+     FractionBox["2", "3"], " ", 
+     SuperscriptBox[
+      RowBox[{
+       SuperscriptBox["q", "2"], "(", " ", 
+       RowBox[{
+        FractionBox["1", "m"], 
+        FractionBox["dV", "dr"]}], ")"}], "2"]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    FractionBox["dE", "dr"], " ", 
+    OverscriptBox["r", "."]}], " ", "=", " ", 
+   RowBox[{
+    FractionBox["2", "3"], " ", 
+    SuperscriptBox[
+     RowBox[{
+      SuperscriptBox["q", "2"], "(", " ", 
+      RowBox[{
+       FractionBox["1", "m"], 
+       FractionBox["dV", "dr"]}], ")"}], "2"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"Due", " ", "to", " ", "symmetry"}], " ", "\[IndentingNewLine]"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"E", " ", "=", " ", 
+    RowBox[{
+     SubscriptBox[
+      SuperscriptBox["\[Integral]", "\[Infinity]"], 
+      SubscriptBox["r", "min"]], " ", 
+     RowBox[{
+      FractionBox["2", "3"], " ", 
+      SuperscriptBox["q", "2"], 
+      SuperscriptBox[
+       RowBox[{"(", " ", 
+        RowBox[{
+         FractionBox["1", "m"], 
+         FractionBox["dV", "dr"]}], ")"}], "2"], " ", 
+      FractionBox["dr", 
+       OverscriptBox["r", "."]]}]}]}], "\[IndentingNewLine]"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+  "As", " ", "this", " ", "is", " ", "head", " ", "on", " ", "collision"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "2"], "m", "  ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       OverscriptBox["r", "."], ")"}], "2"]}], " ", "+", " ", 
+    RowBox[{"V", "(", "r", ")"}]}], " ", "=", " ", 
+   RowBox[{"V", "(", 
+    SubscriptBox["r", "min"], ")"}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Implies]", " ", 
+     OverscriptBox["r", "."]}], "   ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[Sqrt]", 
+       FractionBox["2", "m"]}], " ", 
+      RowBox[{"\[Sqrt]", 
+       RowBox[{"V", "(", 
+        SubscriptBox["r", "min"], ")"}]}]}], " ", "-", " ", 
+     RowBox[{"V", "(", "r", ")"}]}]}], "\[IndentingNewLine]"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"Hence", " "}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"E", " ", "=", " ", 
+   RowBox[{
+    SubscriptBox[
+     SuperscriptBox["\[Integral]", "\[Infinity]"], 
+     SubscriptBox["r", "min"]], " ", 
+    RowBox[{
+     FractionBox["2", "3"], " ", 
+     SuperscriptBox["q", "2"], 
+     SuperscriptBox[
+      RowBox[{"(", " ", 
+       RowBox[{
+        FractionBox["1", "m"], 
+        FractionBox["dV", "dr"]}], ")"}], "2"], " ", 
+     FractionBox["dr", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[Sqrt]", 
+         FractionBox["2", "m"]}], " ", 
+        RowBox[{"\[Sqrt]", 
+         RowBox[{"V", "(", 
+          SubscriptBox["r", "min"], ")"}]}]}], " ", "-", " ", 
+       RowBox[{"V", "(", "r", ")"}]}]]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"E", " ", "=", 
+   RowBox[{
+    FractionBox["2", "3"], " ", 
+    FractionBox[
+     SuperscriptBox["q", "2"], 
+     SuperscriptBox["m", "2"]], " ", 
+    RowBox[{
+     SubscriptBox[
+      SuperscriptBox["\[Integral]", "\[Infinity]"], 
+      SubscriptBox["r", "min"]], " ", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", " ", 
+        FractionBox["dV", "dr"], ")"}], "2"], " ", 
+      FractionBox["dr", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[Sqrt]", 
+          FractionBox["2", "m"]}], " ", 
+         RowBox[{"\[Sqrt]", 
+          RowBox[{"V", "(", 
+           SubscriptBox["r", "min"], ")"}]}]}], " ", "-", " ", 
+        RowBox[{"V", "(", "r", ")"}]}]]}]}]}]}], TraditionalForm]}],
+ InitializationCell->True,
+ FormatType->
+  TraditionalForm,ExpressionUUID->"9e9378fe-38e4-cd4c-8618-b6d4b8183827"]], \
+"Text",
+ CellChangeTimes->{{3.971819070837965*^9, 3.9718190770631447`*^9}, {
+  3.9718191149031467`*^9, 3.9718193517243576`*^9}, {3.971819384061632*^9, 
+  3.9718194028799324`*^9}, {3.971819440552006*^9, 3.971819461049431*^9}, {
+  3.9718195382417545`*^9, 3.9718195882836914`*^9}, {3.9718196466104946`*^9, 
+  3.9718197418214855`*^9}, {3.97181977494178*^9, 3.9718199182871456`*^9}, {
+  3.971820138601513*^9, 3.9718201531073704`*^9}, {3.971820594067007*^9, 
+  3.971820837700655*^9}},ExpressionUUID->"14fc0306-68e9-af46-b8df-\
+980eb60fa9c9"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.9718208766644306`*^9, 
+  3.971820880967016*^9}},ExpressionUUID->"0b344661-1937-eb42-b34f-\
+59d3d7fa9f8f"],
+
+Cell[TextData[Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"V", "(", "r", ")"}], " ", "=", " ", 
+   FractionBox[
+    SuperscriptBox["zZe", "2"], "r"]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"V", "(", 
+    SubscriptBox["r", "min"], ")"}], " ", "=", " ", 
+   RowBox[{
+    FractionBox[
+     SuperscriptBox["zZe", "2"], 
+     SubscriptBox["r", "min"]], "=", " ", 
+    RowBox[{
+     FractionBox["1", "2"], 
+     SuperscriptBox[
+      RowBox[{"m", "(", 
+       SubscriptBox["v", "0"], ")"}], "2"]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["r", "min"], "  ", "=", "  ", 
+   FractionBox[
+    RowBox[{"2", 
+     SuperscriptBox["zZe", "2"]}], 
+    SuperscriptBox[
+     RowBox[{"m", "(", 
+      SubscriptBox["v", "0"], ")"}], "2"]]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    FractionBox["dV", "dr"], " ", "=", 
+    RowBox[{"-", " ", 
+     FractionBox[
+      SuperscriptBox["zZe", "2"], 
+      SuperscriptBox["r", "2"]]}]}], "\[IndentingNewLine]"}], 
+  TraditionalForm], "\[IndentingNewLine]"
+ FormBox[, TraditionalForm]}],
+ FormatType->
+  TraditionalForm,ExpressionUUID->"40209fe5-fae1-e84d-b442-b16bf1ff4e3f"]], \
+"Text",
+ CellChangeTimes->{{3.9718208833139496`*^9, 
+  3.9718210788809624`*^9}},ExpressionUUID->"73e4c164-7708-d449-86ff-\
+27be1dedeb67"]
+},
+WindowSize->{571.8, 573.6},
+WindowMargins->{{Automatic, 36}, {Automatic, 0}},
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3bbb9995-f3cb-ef49-ada1-cdcc68b697c6"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 7166, 216, 677, "Text",ExpressionUUID->"14fc0306-68e9-af46-b8df-980eb60fa9c9"],
+Cell[7723, 238, 154, 3, 28, "Input",ExpressionUUID->"0b344661-1937-eb42-b34f-59d3d7fa9f8f"],
+Cell[7880, 243, 1363, 43, 185, "Text",ExpressionUUID->"73e4c164-7708-d449-86ff-27be1dedeb67"]
+}
+]
+*)
+

@@ -1,0 +1,4538 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[    157215,       4530]
+NotebookOptionsPosition[    154707,       4489]
+NotebookOutlinePosition[    155172,       4507]
+CellTagsIndexPosition[    155129,       4504]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Homework 6", "Title",
+ CellChangeTimes->{{3.9717072029345226`*^9, 
+  3.9717072166423473`*^9}},ExpressionUUID->"2106a4e2-bad6-f243-a71b-\
+8856d5773081"],
+
+Cell[TextData[StyleBox["Question 1",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.97190877128183*^9, 
+  3.9719087829737167`*^9}},ExpressionUUID->"7ae372eb-0601-814b-963c-\
+2658ffcc6238"],
+
+Cell[TextData[{
+ Cell[BoxData[{
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         OverscriptBox["E", "\[Rule]"], "    ", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{
+             OverscriptBox["\[Del]", "\[Rule]"], "\[Phi]"}]}], "  ", "-", " ", 
+           RowBox[{
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              OverscriptBox["A", "\[Rule]"]}], 
+             RowBox[{"\[PartialD]", "t"}]], "           ", "and", "  ", 
+            OverscriptBox["B", "\[Rule]"]}]}], "  ", "=", 
+          RowBox[{
+           OverscriptBox["\[Del]", "\[Rule]"], "\[Times]", 
+           OverscriptBox["A", "\[Rule]"]}]}]}], "\[IndentingNewLine]", 
+        RowBox[{"Lienard", " ", "Wiechart", " ", "Potential", " ", "is"}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Phi]", "(", 
+          RowBox[{
+           OverscriptBox["r", "\[Rule]"], " ", ",", "t"}], ")"}], " ", "=", 
+         " ", 
+         FractionBox["q", 
+          RowBox[{"R", "-", 
+           RowBox[{
+            OverscriptBox["v", "\[Rule]"], ".", 
+            OverscriptBox["R", "\[Rule]"]}]}]]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          OverscriptBox["A", "\[Rule]"], "(", 
+          RowBox[{
+           OverscriptBox["r", "\[Rule]"], " ", ",", "t"}], ")"}], " ", "=", 
+         " ", 
+         FractionBox[
+          RowBox[{"q", " ", 
+           OverscriptBox["v", "\[Rule]"]}], 
+          RowBox[{"R", "-", 
+           RowBox[{
+            OverscriptBox["v", "\[Rule]"], ".", 
+            OverscriptBox["R", "\[Rule]"]}]}]]}], "\[IndentingNewLine]", 
+        RowBox[{
+         OverscriptBox[
+          RowBox[{"R", "(", 
+           RowBox[{"t", "'"}], ")"}], "\[Rule]"], " ", "=", " ", 
+         RowBox[{
+          RowBox[{
+           OverscriptBox["r", "\[Rule]"], "(", "t", ")"}], " ", "-", " ", 
+          RowBox[{
+           RowBox[{
+            OverscriptBox[
+             SubscriptBox["r", "0"], "\[Rule]"], "(", 
+            RowBox[{"t", "'"}], ")"}], "    ", "This", " ", "is", " ", 
+           "displacement", " ", "vector", " ", "from", " ", "the", " ", 
+           "charge", " ", "position", " ", "at", " ", 
+           RowBox[{"t", "'"}], " ", "to", " ", "observation", " ", 
+           "point"}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+        "time", " ", "taken", " ", "by", " ", "the", " ", "light", " ", 
+         "from", " ", "t", " ", "to", " ", 
+         RowBox[{"t", "'"}]}], " ", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"t", "-", 
+          RowBox[{"t", "'"}]}], " ", "=", " ", 
+         RowBox[{
+          FractionBox[
+           RowBox[{"|", 
+            OverscriptBox[
+             RowBox[{"R", "(", 
+              RowBox[{"t", "'"}], ")"}], "\[Rule]"], " ", "|"}], "c"], " ", "=",
+           "  ", 
+          FractionBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              OverscriptBox["r", "\[Rule]"], "(", "t", ")"}], " ", "-", " ", 
+             RowBox[{
+              OverscriptBox[
+               SubscriptBox["r", "0"], "\[Rule]"], "(", 
+              RowBox[{"t", "'"}], ")"}]}], ")"}], "c"]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"in", " ", "the", " ", "units", " ", "c"}], " ", "=", " ", 
+         "1"}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"t", "-", 
+          RowBox[{"t", "'"}]}], " ", "=", " ", 
+         RowBox[{
+          RowBox[{"|", 
+           OverscriptBox[
+            RowBox[{"R", "(", 
+             RowBox[{"t", "'"}], ")"}], "\[Rule]"], " ", "|"}], " ", "=", 
+          "  ", 
+          RowBox[{
+           RowBox[{"|", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               OverscriptBox["r", "\[Rule]"], "(", "t", ")"}], " ", "-", " ", 
+              RowBox[{
+               OverscriptBox[
+                SubscriptBox["r", "0"], "\[Rule]"], "(", 
+               RowBox[{"t", "'"}], ")"}]}], ")"}], "|", 
+            RowBox[{"\[Implies]", 
+             RowBox[{"t", "-", 
+              RowBox[{"t", "'"}]}]}]}], " ", "=", " ", "R"}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+        "We", " ", "will", " ", "need", " ", "some", " ", "derivatives", " ", 
+         "to", " ", "calculate", " ", "the", " ", "Electric", " ", "and", " ",
+          "Magnetic", " ", "field"}], "\[IndentingNewLine]", 
+        RowBox[{
+         SuperscriptBox["R", "2"], " ", "=", " ", 
+         RowBox[{
+          SubscriptBox["R", "i"], 
+          SubscriptBox["R", "i"]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", "R"}], 
+          RowBox[{"\[PartialD]", 
+           RowBox[{"t", "'"}]}]], " ", "=", " ", 
+         RowBox[{
+          RowBox[{
+           FractionBox[
+            SubscriptBox["R", "i"], "R"], 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             SubscriptBox["R", "i"]}], 
+            RowBox[{"\[PartialD]", 
+             RowBox[{"t", "'"}]}]]}], " ", "=", " ", 
+          RowBox[{
+           RowBox[{
+            FractionBox[
+             SubscriptBox["R", "i"], "R"], 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{"(", " ", 
+               RowBox[{
+                RowBox[{
+                 SubscriptBox["r", "i"], "(", "t", ")"}], " ", "-", " ", 
+                RowBox[{
+                 SubscriptBox[
+                  SubscriptBox["r", "i"], "0"], "(", 
+                 RowBox[{"t", "'"}], ")"}]}], ")"}], " "}], 
+             RowBox[{"\[PartialD]", 
+              RowBox[{"t", "'"}]}]]}], " ", "=", 
+           RowBox[{
+            FractionBox[
+             SubscriptBox["R", "i"], "R"], 
+            RowBox[{"{", 
+             RowBox[{
+              FractionBox[
+               RowBox[{"\[PartialD]", 
+                RowBox[{"(", " ", 
+                 RowBox[{
+                  SubscriptBox["r", "i"], "(", "t", ")"}], " ", ")"}]}], 
+               RowBox[{"\[PartialD]", 
+                RowBox[{"t", "'"}]}]], "-", " ", 
+              FractionBox[
+               RowBox[{
+                RowBox[{"\[PartialD]", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SubscriptBox[
+                    SubscriptBox["r", "i"], "0"], "(", 
+                   RowBox[{"t", "'"}], ")"}], ")"}]}], " "}], 
+               RowBox[{"\[PartialD]", 
+                RowBox[{"t", "'"}]}]]}], "}"}]}]}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", "R"}], 
+          RowBox[{"\[PartialD]", 
+           RowBox[{"t", "'"}]}]], " ", "=", 
+         RowBox[{
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{
+             SubscriptBox["R", "i"], ".", 
+             SubscriptBox["v", "i"]}], "R"]}], "=", " ", 
+          FractionBox[
+           RowBox[{"-", 
+            RowBox[{"(", 
+             RowBox[{
+              OverscriptBox["v", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}], ")"}]}], "R"]}]}], 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Hence", " ", 
+          FractionBox[
+           RowBox[{"\[PartialD]", "R"}], 
+           RowBox[{"\[PartialD]", "t"}]]}], " ", "=", " ", 
+         RowBox[{
+          FractionBox[
+           RowBox[{"\[PartialD]", "R"}], 
+           RowBox[{"\[PartialD]", 
+            RowBox[{"t", "'"}]}]], 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{"t", "'"}]}], 
+           RowBox[{"\[PartialD]", "t"}]]}]}], " ", "\[IndentingNewLine]", 
+        RowBox[{"Let", " ", "us", " ", "calculate", " ", "the", " ", 
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{"t", "'"}]}], 
+          RowBox[{"\[PartialD]", "t"}]]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          RowBox[{"t", "-", 
+           RowBox[{"t", "'"}]}]}], " ", "=", " ", 
+         RowBox[{
+          RowBox[{"R", " ", "\[Implies]", 
+           RowBox[{"1", "-", 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{"t", "'"}]}], 
+             RowBox[{"\[PartialD]", "t"}]]}]}], "=", 
+          RowBox[{
+           RowBox[{
+            FractionBox[
+             RowBox[{"\[PartialD]", "R"}], 
+             RowBox[{"\[PartialD]", "t"}]], " ", "\[Implies]", 
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"t", "'"}]}], 
+              RowBox[{"\[PartialD]", "t"}]]}]}], "=", "  ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              FractionBox[
+               RowBox[{"\[PartialD]", "R"}], 
+               RowBox[{"\[PartialD]", 
+                RowBox[{"t", "'"}]}]], 
+              FractionBox[
+               RowBox[{"\[PartialD]", 
+                RowBox[{"t", "'"}]}], 
+               RowBox[{"\[PartialD]", "t"}]]}], "\[Implies]", 
+             RowBox[{"1", "-", 
+              FractionBox[
+               RowBox[{"\[PartialD]", 
+                RowBox[{"t", "'"}]}], 
+               RowBox[{"\[PartialD]", "t"}]]}]}], "=", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"-", 
+               RowBox[{"(", 
+                RowBox[{
+                 OverscriptBox["v", "\[Rule]"], ".", 
+                 OverscriptBox["R", "\[Rule]"]}], ")"}]}], "R"], "  ", 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"t", "'"}]}], 
+              RowBox[{"\[PartialD]", "t"}]]}]}]}]}]}], " ", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", "1"}], "=", 
+         RowBox[{
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{"t", "'"}]}], 
+           RowBox[{"\[PartialD]", "t"}]], "-", 
+          RowBox[{
+           FractionBox[
+            RowBox[{"(", 
+             RowBox[{
+              OverscriptBox["v", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}], ")"}], "R"], "  ", 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"t", "'"}]}], 
+            RowBox[{"\[PartialD]", "t"}]]}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            RowBox[{"t", "'"}]}], 
+           RowBox[{"\[PartialD]", "t"}]]}], " ", "=", 
+         SuperscriptBox[
+          RowBox[{"{", " ", 
+           RowBox[{"1", "-", 
+            FractionBox[
+             RowBox[{"(", 
+              RowBox[{
+               OverscriptBox["v", "\[Rule]"], ".", 
+               OverscriptBox["R", "\[Rule]"]}], ")"}], "R"]}], "}"}], 
+          RowBox[{"-", "1"}]]}], "\[IndentingNewLine]", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[PartialD]", "R"}], 
+          RowBox[{"\[PartialD]", "t"}]], " ", "=", " ", 
+         RowBox[{
+          RowBox[{
+           FractionBox[
+            RowBox[{"\[PartialD]", "R"}], 
+            RowBox[{"\[PartialD]", 
+             RowBox[{"t", "'"}]}]], 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"t", "'"}]}], 
+            RowBox[{"\[PartialD]", "t"}]]}], " ", "=", "  ", 
+          RowBox[{
+           RowBox[{
+            FractionBox[
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}], ")"}]}], "R"], 
+            SuperscriptBox[
+             RowBox[{"{", " ", 
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}], ")"}], "R"]}], "}"}], 
+             RowBox[{"-", "1"}]]}], " ", "=", " ", 
+           FractionBox[
+            RowBox[{"-", 
+             RowBox[{
+              OverscriptBox["v", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}]}], 
+            RowBox[{" ", 
+             RowBox[{"R", "-", 
+              RowBox[{
+               OverscriptBox["v", "\[Rule]"], ".", 
+               OverscriptBox["R", "\[Rule]"]}]}]}]]}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         SuperscriptBox["R", "2"], " ", "=", 
+         RowBox[{
+          RowBox[{"(", " ", 
+           RowBox[{
+            RowBox[{
+             OverscriptBox["r", "\[Rule]"], "(", "t", ")"}], " ", "-", " ", 
+            RowBox[{
+             OverscriptBox[
+              SubscriptBox["r", "0"], "\[Rule]"], "(", 
+             RowBox[{"t", "'"}], ")"}]}], ")"}], ".", 
+          RowBox[{"(", " ", 
+           RowBox[{
+            RowBox[{
+             OverscriptBox["r", "\[Rule]"], "(", "t", ")"}], " ", "-", " ", 
+            RowBox[{
+             OverscriptBox[
+              SubscriptBox["r", "0"], "\[Rule]"], "(", 
+             RowBox[{"t", "'"}], ")"}]}], "  ", ")"}]}]}], " ", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          SuperscriptBox["R", "2"]}], " ", "=", "   ", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["x", "j"], " ", "-", 
+            SubsuperscriptBox["x", "j", "0"]}], ")"}], "  ", 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["x", "j"], " ", "-", 
+            SubsuperscriptBox["x", "j", "0"]}], ")"}]}]}], " ", "\[IndentingNewLine]",
+         " ", 
+        RowBox[{
+         RowBox[{"\[Implies]", " ", 
+          RowBox[{"2", "R", " ", 
+           RowBox[{
+            SubscriptBox["\[PartialD]", "i"], "R"}]}]}], " ", "=", " ", 
+         RowBox[{"2", 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["\[Delta]", "ij"], "-", 
+            RowBox[{
+             SubscriptBox["\[PartialD]", "i"], 
+             RowBox[{"(", 
+              SubsuperscriptBox["x", "j", "0"], ")"}]}]}], ")"}], 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["x", "j"], " ", "-", 
+            SubsuperscriptBox["x", "j", "0"]}], ")"}]}]}], " ", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          RowBox[{"2", "R", " ", 
+           RowBox[{
+            SubscriptBox["\[PartialD]", "i"], "R"}]}]}], " ", "=", " ", 
+         RowBox[{"2", 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["\[Delta]", "ij"], "-", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"(", 
+                SubsuperscriptBox["x", "j", "0"], ")"}]}], 
+              RowBox[{"\[PartialD]", 
+               RowBox[{"t", "'"}]}]], 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"t", "'"}]}], 
+              RowBox[{"\[PartialD]", 
+               SubscriptBox["x", "i"]}]]}]}], ")"}], 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["x", "j"], " ", "-", 
+            SubsuperscriptBox["x", "j", "0"]}], ")"}]}]}], " ", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          RowBox[{"2", "R", " ", 
+           RowBox[{
+            SubscriptBox["\[PartialD]", "i"], "R"}]}]}], " ", "=", " ", 
+         RowBox[{"2", 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["\[Delta]", "ij"], "-", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"(", 
+                SubsuperscriptBox["x", "j", "0"], ")"}]}], 
+              RowBox[{"\[PartialD]", 
+               RowBox[{"t", "'"}]}]], 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"t", "'"}]}], 
+              RowBox[{"\[PartialD]", 
+               SubscriptBox["x", "i"]}]]}]}], ")"}], 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["x", "j"], " ", "-", 
+            SubsuperscriptBox["x", "j", "0"]}], ")"}]}]}], " ", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          RowBox[{"2", "R", " ", 
+           RowBox[{
+            SubscriptBox["\[PartialD]", "i"], "R"}]}]}], " ", "=", " ", 
+         RowBox[{"2", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SubscriptBox["\[Delta]", "ij"], "(", 
+             RowBox[{
+              SubscriptBox["x", "j"], " ", "-", 
+              SubsuperscriptBox["x", "j", "0"]}], ")"}], "-", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"(", 
+                SubsuperscriptBox["x", "j", "0"], ")"}]}], 
+              RowBox[{"\[PartialD]", 
+               RowBox[{"t", "'"}]}]], 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"t", "'"}]}], 
+              RowBox[{"\[PartialD]", 
+               SubscriptBox["x", "i"]}]], 
+             RowBox[{"(", 
+              RowBox[{
+               SubscriptBox["x", "j"], " ", "-", 
+               SubsuperscriptBox["x", "j", "0"]}], ")"}]}]}], ")"}]}]}], " ", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          RowBox[{"2", "R", " ", 
+           RowBox[{
+            SubscriptBox["\[PartialD]", "i"], "R"}]}]}], " ", "=", " ", 
+         RowBox[{"2", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              SubscriptBox["x", "i"], " ", "-", 
+              SubsuperscriptBox["x", "i", "0"]}], ")"}], "-", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"(", 
+                SubsuperscriptBox["x", "j", "0"], ")"}]}], 
+              RowBox[{"\[PartialD]", 
+               RowBox[{"t", "'"}]}]], 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"t", "'"}]}], 
+              RowBox[{"\[PartialD]", 
+               SubscriptBox["x", "i"]}]], 
+             RowBox[{"(", 
+              RowBox[{
+               SubscriptBox["x", "j"], " ", "-", 
+               RowBox[{
+                SubsuperscriptBox["x", "j", "0"], "(", 
+                RowBox[{"t", "'"}], ")"}]}], ")"}]}]}], ")"}]}]}], " ", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          RowBox[{"2", "R", " ", 
+           RowBox[{
+            SubscriptBox["\[PartialD]", "i"], "R"}]}]}], " ", "=", " ", 
+         RowBox[{"2", 
+          RowBox[{"(", 
+           RowBox[{"R", "-", 
+            RowBox[{
+             RowBox[{
+              OverscriptBox["v", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}], "  ", 
+             RowBox[{
+              SubscriptBox["\[PartialD]", "i"], 
+              RowBox[{"t", "'"}]}]}]}], ")"}]}]}], "  ", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", " ", 
+          RowBox[{
+           SubscriptBox["\[PartialD]", "i"], "R"}]}], " ", "=", " ", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"R", "-", 
+             RowBox[{
+              RowBox[{
+               OverscriptBox["v", "\[Rule]"], ".", 
+               OverscriptBox["R", "\[Rule]"]}], "  ", 
+              RowBox[{
+               SubscriptBox["\[PartialD]", "i"], 
+               RowBox[{"t", "'"}]}]}]}], ")"}], "  "}], "R"]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"We", " ", "know", " ", "that", " ", "t"}], " ", "-", " ", 
+          RowBox[{"t", "'"}]}], " ", "=", " ", "R"}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          RowBox[{
+           SubscriptBox["\[PartialD]", "i"], 
+           RowBox[{"t", "'"}]}]}], " ", "=", " ", 
+         RowBox[{"-", " ", 
+          RowBox[{
+           SubscriptBox["\[PartialD]", "i"], "R"}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+        "Putting", " ", "in", " ", "the", " ", "above", " ", "we", " ", "we", 
+         " ", "will", " ", "get"}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          RowBox[{
+           SubscriptBox["\[PartialD]", "i"], 
+           RowBox[{"t", "'"}]}]}], " ", "=", " ", 
+         RowBox[{
+          RowBox[{
+           FractionBox[
+            RowBox[{"-", 
+             SubscriptBox["R", "i"]}], 
+            RowBox[{"R", "-", 
+             RowBox[{
+              OverscriptBox["v", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"], "  "}]}]], " ", "\[Implies]", 
+           RowBox[{
+            SubscriptBox["\[PartialD]", "i"], "R"}]}], " ", "=", " ", 
+          FractionBox[
+           SubscriptBox["R", "i"], 
+           RowBox[{"R", "-", 
+            RowBox[{
+             OverscriptBox["v", "\[Rule]"], ".", 
+             OverscriptBox["R", "\[Rule]"], "  "}]}]]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+        "Further", " ", "results", " ", "that", " ", "follows", " ", "are"}], 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[PartialD]", "i"], 
+          SubscriptBox["R", "j"]}], " ", "=", " ", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["\[PartialD]", "i"], 
+           RowBox[{"(", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              SubscriptBox["x", "j"], " ", "-", 
+              SubsuperscriptBox["x", "j", "0"]}], ")"}], " ", ")"}]}], " ", "=",
+           " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             SubscriptBox["\[PartialD]", "i"], 
+             SubscriptBox["x", "j"]}], "-", " ", 
+            RowBox[{
+             SubscriptBox["\[PartialD]", "i"], 
+             SubsuperscriptBox["x", "j", "0"]}]}], " ", "=", " ", 
+           RowBox[{
+            SubscriptBox["\[Delta]", "ij"], " ", "-", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               SubsuperscriptBox["x", "j", "0"]}], 
+              RowBox[{"\[PartialD]", 
+               RowBox[{"t", "'"}]}]], 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               RowBox[{"t", "'"}]}], 
+              RowBox[{"\[PartialD]", "x"}]]}]}]}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          RowBox[{
+           SubscriptBox["\[PartialD]", "i"], 
+           SubscriptBox["R", "j"]}]}], " ", "=", " ", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["\[Delta]", "ij"], " ", "-", 
+           RowBox[{
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              SubsuperscriptBox["x", "j", "0"]}], 
+             RowBox[{"\[PartialD]", 
+              RowBox[{"t", "'"}]}]], 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{"t", "'"}]}], 
+             RowBox[{"\[PartialD]", "x"}]]}]}], "=", " ", 
+          RowBox[{
+           SubscriptBox["\[Delta]", "ij"], " ", "+", 
+           FractionBox[
+            RowBox[{
+             SubscriptBox["v", "j"], 
+             SubscriptBox["R", "i"]}], 
+            RowBox[{"R", "-", 
+             RowBox[{
+              OverscriptBox["v", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"], "  "}]}]]}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", " ", 
+          RowBox[{
+           SubscriptBox["\[PartialD]", "i"], 
+           SubscriptBox["v", "j"]}]}], " ", "=", " ", 
+         RowBox[{
+          RowBox[{
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             SubscriptBox["v", "j"]}], 
+            RowBox[{"\[PartialD]", 
+             RowBox[{"t", "'"}]}]], 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"t", "'"}]}], 
+            RowBox[{"\[PartialD]", "x"}]]}], " ", "=", 
+          FractionBox[
+           RowBox[{
+            RowBox[{"-", 
+             SubscriptBox["R", "i"]}], 
+            SubscriptBox["a", "j"]}], 
+           RowBox[{"R", "-", 
+            RowBox[{
+             OverscriptBox["v", "\[Rule]"], ".", 
+             OverscriptBox["R", "\[Rule]"], "  "}]}]]}]}], " ", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            SubscriptBox["v", "i"]}], 
+           RowBox[{"\[PartialD]", "t", " "}]]}], " ", "=", "  ", 
+         RowBox[{
+          RowBox[{
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             SubscriptBox["v", "i"]}], 
+            RowBox[{"\[PartialD]", 
+             RowBox[{"t", "'"}]}]], 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"t", "'"}]}], 
+            RowBox[{"\[PartialD]", "t"}]]}], " ", "=", " ", 
+          RowBox[{
+           RowBox[{"a", 
+            SuperscriptBox[
+             RowBox[{"{", " ", 
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}], ")"}], "R"]}], "}"}], 
+             RowBox[{"-", "1"}]]}], " ", "=", 
+           FractionBox[
+            RowBox[{"a", " ", "R"}], 
+            RowBox[{"R", "-", 
+             RowBox[{"(", 
+              RowBox[{
+               OverscriptBox["v", "\[Rule]"], ".", 
+               OverscriptBox["R", "\[Rule]"]}], ")"}]}]]}]}]}], "\[IndentingNewLine]",
+         " ", 
+        RowBox[{
+         RowBox[{"\[Implies]", " ", 
+          FractionBox[
+           RowBox[{"\[PartialD]", "R"}], 
+           RowBox[{"\[PartialD]", "t"}]]}], "  ", "=", "  ", 
+         FractionBox[
+          RowBox[{"-", 
+           RowBox[{
+            OverscriptBox["v", "\[Rule]"], ".", 
+            OverscriptBox["R", "\[Rule]"]}]}], 
+          RowBox[{" ", 
+           RowBox[{"R", "-", 
+            RowBox[{
+             OverscriptBox["v", "\[Rule]"], ".", 
+             OverscriptBox["R", "\[Rule]"]}]}]}]]}], "\[IndentingNewLine]", 
+        " ", 
+        RowBox[{
+         RowBox[{"\[Implies]", " ", 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            OverscriptBox["R", "\[Rule]"]}], 
+           RowBox[{"\[PartialD]", "t"}]]}], " ", "=", " ", 
+         RowBox[{
+          RowBox[{
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             OverscriptBox["R", "\[Rule]"]}], 
+            RowBox[{"\[PartialD]", 
+             RowBox[{"t", "'"}]}]], " ", 
+           FractionBox[
+            RowBox[{"\[PartialD]", 
+             RowBox[{"t", "'"}]}], 
+            RowBox[{"\[PartialD]", "t"}]]}], "=", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", 
+             OverscriptBox["v", "\[Rule]"]}], 
+            FractionBox[
+             RowBox[{"\[PartialD]", 
+              RowBox[{"t", "'"}]}], 
+             RowBox[{"\[PartialD]", "t"}]]}], " ", "=", " ", 
+           FractionBox[
+            RowBox[{
+             OverscriptBox["v", "\[Rule]"], "R"}], 
+            RowBox[{"R", "-", 
+             RowBox[{"(", 
+              RowBox[{
+               OverscriptBox["v", "\[Rule]"], ".", 
+               OverscriptBox["R", "\[Rule]"]}], ")"}]}]]}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         OverscriptBox["E", "\[Rule]"], "    ", "=", 
+         RowBox[{
+          RowBox[{"-", 
+           RowBox[{
+            OverscriptBox["\[Del]", "\[Rule]"], "\[Phi]"}]}], "  ", "-", " ", 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            OverscriptBox["A", "\[Rule]"]}], 
+           RowBox[{"\[PartialD]", "t"}]]}]}], " ", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          SubscriptBox["E", "i"]}], " ", "=", " ", 
+         RowBox[{
+          RowBox[{"-", 
+           RowBox[{
+            SubscriptBox["\[PartialD]", "i"], "\[Phi]"}]}], " ", "-", 
+          FractionBox[
+           RowBox[{"\[PartialD]", 
+            SubscriptBox["A", "i"]}], 
+           RowBox[{"\[PartialD]", "t"}]]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          SubscriptBox["E", "i"]}], " ", "=", " ", 
+         RowBox[{
+          RowBox[{"-", 
+           RowBox[{
+            SubscriptBox["\[PartialD]", "i"], 
+            RowBox[{"{", 
+             FractionBox["q", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}]], "}"}]}]}], " ", "-", 
+          RowBox[{
+           FractionBox["\[PartialD]", 
+            RowBox[{"\[PartialD]", "t"}]], 
+           RowBox[{"{", 
+            FractionBox[
+             RowBox[{"q", " ", 
+              OverscriptBox["v", "\[Rule]"]}], 
+             RowBox[{"R", "-", 
+              RowBox[{
+               OverscriptBox["v", "\[Rule]"], ".", 
+               OverscriptBox["R", "\[Rule]"]}]}]], "}"}]}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          SubscriptBox["E", "i"]}], " ", "=", " ", 
+         RowBox[{
+          RowBox[{
+           FractionBox["q", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["\[PartialD]", "i"], "R"}], " ", "-", 
+             RowBox[{
+              SubscriptBox["\[PartialD]", "i"], 
+              RowBox[{"(", 
+               RowBox[{
+                SubscriptBox["v", "j"], 
+                SubscriptBox["R", "j"]}], ")"}]}]}], "}"}]}], " ", "-", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             FractionBox[
+              RowBox[{" ", "q"}], 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}]], 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               OverscriptBox["v", "\[Rule]"]}], 
+              RowBox[{"\[PartialD]", "t"}]]}], "-", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"(", 
+               RowBox[{"q", " ", 
+                SubscriptBox["v", "i"]}], ")"}], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], 
+             RowBox[{"(", 
+              RowBox[{
+               FractionBox[
+                RowBox[{"\[PartialD]", "R"}], 
+                RowBox[{"\[PartialD]", "t"}]], " ", "-", 
+               FractionBox[
+                RowBox[{
+                 RowBox[{"\[PartialD]", 
+                  OverscriptBox["v", "\[Rule]"]}], ".", 
+                 OverscriptBox["R", "\[Rule]"]}], 
+                RowBox[{"\[PartialD]", "t"}]]}], " ", ")"}]}]}], "}"}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          SubscriptBox["E", "i"]}], " ", "=", " ", 
+         RowBox[{
+          RowBox[{
+           FractionBox["q", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["\[PartialD]", "i"], "R"}], " ", "-", 
+             RowBox[{
+              RowBox[{
+               SubscriptBox["\[PartialD]", "i"], 
+               RowBox[{"(", 
+                SubscriptBox["v", "j"], ")"}]}], " ", 
+              SubscriptBox["R", "j"]}], " ", "-", 
+             RowBox[{
+              SubscriptBox["v", "j"], 
+              RowBox[{
+               SubscriptBox["\[PartialD]", "i"], 
+               RowBox[{"(", 
+                SubscriptBox["R", "j"], ")"}]}]}]}], " ", "}"}]}], " ", "-", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             FractionBox[
+              RowBox[{" ", "R"}], 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}]], 
+             FractionBox[
+              RowBox[{"\[PartialD]", 
+               OverscriptBox["v", "\[Rule]"]}], 
+              RowBox[{"\[PartialD]", "t"}]]}], "-", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"(", 
+               RowBox[{"q", " ", 
+                SubscriptBox["v", "i"]}], ")"}], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], 
+             RowBox[{"(", 
+              RowBox[{
+               FractionBox[
+                RowBox[{"\[PartialD]", "R"}], 
+                RowBox[{"\[PartialD]", "t"}]], " ", "-", 
+               RowBox[{
+                FractionBox[
+                 RowBox[{"\[PartialD]", 
+                  OverscriptBox["v", "\[Rule]"]}], 
+                 RowBox[{"\[PartialD]", "t"}]], " ", ".", 
+                OverscriptBox["R", "\[Rule]"]}], "   ", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                FractionBox[
+                 RowBox[{"\[PartialD]", 
+                  OverscriptBox["R", "\[Rule]"]}], 
+                 RowBox[{"\[PartialD]", "t"}]]}]}], ")"}]}]}], " ", "}"}]}]}],
+         "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          SubscriptBox["E", "i"]}], " ", "=", " ", 
+         RowBox[{
+          RowBox[{
+           FractionBox["q", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], 
+           RowBox[{"{", 
+            RowBox[{
+             FractionBox[
+              SubscriptBox["R", "i"], 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"], "  "}]}]], "+", 
+             RowBox[{
+              FractionBox[
+               RowBox[{
+                SubscriptBox["R", "i"], 
+                SubscriptBox["a", "j"]}], 
+               RowBox[{"R", "-", 
+                RowBox[{
+                 OverscriptBox["v", "\[Rule]"], ".", 
+                 OverscriptBox["R", "\[Rule]"], "  "}]}]], 
+              SubscriptBox["R", "j"]}], " ", "-", 
+             RowBox[{
+              SubscriptBox["v", "j"], "(", 
+              RowBox[{
+               SubscriptBox["\[Delta]", "ij"], " ", "+", 
+               FractionBox[
+                RowBox[{
+                 SubscriptBox["v", "j"], 
+                 SubscriptBox["R", "i"]}], 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"], "  "}]}]]}], ")"}]}], 
+            "}"}]}], " ", "-", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             FractionBox[
+              RowBox[{" ", "R"}], 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}]], 
+             FractionBox[
+              SubscriptBox["a", "i"], 
+              RowBox[{"R", "-", 
+               RowBox[{"(", 
+                RowBox[{
+                 OverscriptBox["v", "\[Rule]"], ".", 
+                 OverscriptBox["R", "\[Rule]"]}], ")"}]}]]}], "-", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"(", 
+               RowBox[{"q", " ", 
+                SubscriptBox["v", "i"]}], ")"}], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], 
+             RowBox[{"(", 
+              RowBox[{
+               FractionBox[
+                RowBox[{"-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}], 
+                RowBox[{" ", 
+                 RowBox[{"R", "-", 
+                  RowBox[{
+                   OverscriptBox["v", "\[Rule]"], ".", 
+                   OverscriptBox["R", "\[Rule]"]}]}]}]], " ", "-", 
+               RowBox[{
+                FractionBox[
+                 RowBox[{"R", 
+                  OverscriptBox["a", "\[Rule]"]}], 
+                 RowBox[{"R", "-", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    OverscriptBox["v", "\[Rule]"], ".", 
+                    OverscriptBox["R", "\[Rule]"]}], ")"}]}]], " ", ".", 
+                OverscriptBox["R", "\[Rule]"]}], "   ", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", " ", 
+                FractionBox[
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], "R"}], 
+                 RowBox[{"R", "-", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    OverscriptBox["v", "\[Rule]"], ".", 
+                    OverscriptBox["R", "\[Rule]"]}], ")"}]}]]}]}], ")"}]}]}], 
+           " ", "}"}]}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", " ", 
+          SubscriptBox["E", "i"]}], " ", "=", " ", 
+         RowBox[{
+          FractionBox["q", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"R", "-", 
+              RowBox[{
+               OverscriptBox["v", "\[Rule]"], ".", 
+               OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"]], 
+          RowBox[{"{", 
+           RowBox[{
+            SubscriptBox["R", "i"], "+", 
+            RowBox[{
+             SubscriptBox["R", "i"], 
+             SubscriptBox["a", "j"], 
+             SubscriptBox["R", "j"]}], "-", 
+            RowBox[{
+             SubscriptBox["v", "i"], " ", 
+             RowBox[{"(", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}], "  ", ")"}]}], "-", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"(", 
+               SubscriptBox["v", "j"], ")"}], "2"], 
+             SubscriptBox["R", "i"]}], " ", "-", " ", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["a", "i"], "(", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}], ")"}], "R"}], "-", " ", 
+            RowBox[{
+             RowBox[{"(", " ", 
+              SubscriptBox["v", "i"], ")"}], 
+             RowBox[{
+              OverscriptBox["v", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}]}], "  ", "-", " ", 
+            RowBox[{
+             RowBox[{"(", " ", 
+              SubscriptBox["v", "i"], ")"}], " ", 
+             RowBox[{
+              OverscriptBox["a", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}], " ", "R"}], " ", "-", " ", 
+            RowBox[{
+             RowBox[{"(", 
+              SubscriptBox["v", "i"], ")"}], 
+             SuperscriptBox["v", "2"], "R"}]}], " ", "}"}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", " ", 
+          OverscriptBox["E", "\[Rule]"]}], " ", "=", " ", 
+         RowBox[{
+          FractionBox["q", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"R", "-", 
+              RowBox[{
+               OverscriptBox["v", "\[Rule]"], ".", 
+               OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"]], 
+          RowBox[{"{", 
+           RowBox[{
+            SubscriptBox["R", "i"], "+", 
+            RowBox[{
+             SubscriptBox["R", "i"], 
+             RowBox[{
+              OverscriptBox["a", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}]}], "-", 
+            SubscriptBox["v", "i"], " ", "-", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"(", "v", ")"}], "2"], 
+             SubscriptBox["R", "i"]}], " ", "-", " ", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["a", "i"], "(", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}], ")"}], "R"}], "  ", "+", 
+            " ", 
+            RowBox[{
+             RowBox[{"(", 
+              SubscriptBox["v", "i"], ")"}], 
+             RowBox[{
+              OverscriptBox["v", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}]}], "  ", "+", " ", 
+            RowBox[{
+             RowBox[{"(", " ", 
+              SubscriptBox["v", "i"], ")"}], " ", 
+             RowBox[{
+              OverscriptBox["a", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}]}], "  ", "+", " ", 
+            RowBox[{
+             RowBox[{"(", 
+              SubscriptBox["qv", "i"], ")"}], 
+             SuperscriptBox["v", "2"], "R"}]}], " ", "}"}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+        "We", " ", "will", " ", "collecting", " ", "the", " ", "terms"}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", " ", 
+          OverscriptBox["E", "\[Rule]"]}], " ", "=", " ", 
+         RowBox[{
+          FractionBox["q", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"R", "-", 
+              RowBox[{
+               OverscriptBox["v", "\[Rule]"], ".", 
+               OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"]], 
+          RowBox[{"{", 
+           RowBox[{
+            SubscriptBox["R", "i"], "+", 
+            RowBox[{
+             SubscriptBox["R", "i"], 
+             RowBox[{
+              OverscriptBox["a", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}]}], "-", 
+            SubscriptBox["v", "i"], " ", "-", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"(", "v", ")"}], "2"], 
+             SubscriptBox["R", "i"]}], " ", "-", " ", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["a", "i"], "(", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}], ")"}], "R"}], "  ", "+", 
+            " ", 
+            RowBox[{
+             RowBox[{"(", 
+              SubscriptBox["v", "i"], ")"}], 
+             RowBox[{
+              OverscriptBox["v", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}]}], "  ", "+", " ", 
+            RowBox[{
+             RowBox[{"(", " ", 
+              SubscriptBox["v", "i"], ")"}], " ", 
+             RowBox[{
+              OverscriptBox["a", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}]}], "  ", "+", " ", 
+            RowBox[{
+             RowBox[{"(", 
+              SubscriptBox["v", "i"], ")"}], 
+             SuperscriptBox["v", "2"], "R"}]}], " ", "}"}]}]}], 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{
+        "Which", " ", "can", " ", "be", " ", "written", " ", "as", " ", "a"}],
+         "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", " ", 
+          OverscriptBox["E", "\[Rule]"]}], " ", "=", " ", 
+         RowBox[{
+          FractionBox[
+           RowBox[{
+            RowBox[{"q", "(", 
+             RowBox[{"1", "-", 
+              SuperscriptBox["v", "2"]}], ")"}], 
+            RowBox[{"(", 
+             RowBox[{
+              OverscriptBox["R", "\[Rule]"], "-", 
+              RowBox[{
+               OverscriptBox["v", "\[Rule]"], "R"}]}], ")"}]}], 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"R", "-", 
+              RowBox[{
+               OverscriptBox["v", "\[Rule]"], ".", 
+               OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"]], " ", "+", " ", 
+          FractionBox[
+           RowBox[{"q", "[", 
+            RowBox[{
+             OverscriptBox["R", "\[Rule]"], " ", "\[Times]", 
+             RowBox[{"(", 
+              RowBox[{
+               OverscriptBox["R", "\[Rule]"], "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], "R"}]}], ")"}], "\[Times]", 
+             OverscriptBox["a", "\[Rule]"]}], "]"}], 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"R", "-", 
+              RowBox[{
+               OverscriptBox["v", "\[Rule]"], ".", 
+               OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"]]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+        "Similarly", " ", "caluclating", " ", "for", " ", "the", " ", 
+         "magnetic", " ", "field"}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          OverscriptBox["A", "\[Rule]"], "(", 
+          RowBox[{
+           OverscriptBox["r", "\[Rule]"], " ", ",", "t"}], ")"}], " ", "=", 
+         " ", 
+         FractionBox[
+          RowBox[{"q", " ", 
+           OverscriptBox["v", "\[Rule]"]}], 
+          RowBox[{"R", "-", 
+           RowBox[{
+            OverscriptBox["v", "\[Rule]"], ".", 
+            OverscriptBox["R", "\[Rule]"]}]}]]}], "\[IndentingNewLine]", 
+        RowBox[{
+         OverscriptBox["B", "\[Rule]"], "   ", "=", "  ", 
+         RowBox[{
+          RowBox[{
+           OverscriptBox["\[Del]", "\[Rule]"], "\[Times]", 
+           OverscriptBox["A", "\[Rule]"]}], "   ", "=", " ", 
+          RowBox[{
+           RowBox[{
+            SubscriptBox["\[Epsilon]", "ijk"], 
+            RowBox[{
+             SubscriptBox["\[PartialD]", "j"], " ", 
+             FractionBox[
+              RowBox[{"q", " ", 
+               SubscriptBox["v", "k"]}], 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}]]}]}], " ", "=", " ", 
+           RowBox[{
+            SubscriptBox["q\[Epsilon]", "ijk"], 
+            RowBox[{
+             SubscriptBox["\[PartialD]", "j"], 
+             RowBox[{"(", " ", 
+              FractionBox[
+               RowBox[{" ", 
+                SubscriptBox["v", "k"]}], 
+               RowBox[{"R", "-", 
+                RowBox[{
+                 OverscriptBox["v", "\[Rule]"], ".", 
+                 OverscriptBox["R", "\[Rule]"]}]}]], ")"}]}]}]}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          OverscriptBox["B", "\[Rule]"]}], "    ", "=", 
+         RowBox[{
+          SubscriptBox["q\[Epsilon]", "ijk"], 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               SubscriptBox["\[PartialD]", "j"], " ", 
+               SubscriptBox["v", "k"]}], "  ", ")"}], 
+             FractionBox["1", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}]]}], " ", "+", 
+            RowBox[{
+             SubscriptBox["v", "k"], 
+             RowBox[{
+              SubscriptBox["\[PartialD]", "j"], 
+              RowBox[{"(", 
+               FractionBox["1", 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}]], ")"}]}]}]}], " ", 
+           "}"}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          OverscriptBox["B", "\[Rule]"]}], "    ", "=", 
+         RowBox[{
+          SubscriptBox["q\[Epsilon]", "ijk"], 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             FractionBox[
+              RowBox[{
+               RowBox[{"-", 
+                SubscriptBox["R", "j"]}], 
+               SubscriptBox["a", "k"]}], 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"], "  "}]}]], 
+             FractionBox["1", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}]]}], " ", "-", " ", 
+            RowBox[{
+             FractionBox[
+              SubscriptBox["v", "k"], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], 
+             RowBox[{
+              SubscriptBox["\[PartialD]", "j"], 
+              RowBox[{"(", 
+               RowBox[{"R", "-", 
+                RowBox[{
+                 OverscriptBox["v", "\[Rule]"], ".", 
+                 OverscriptBox["R", "\[Rule]"]}]}], ")"}]}]}]}], "}"}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          OverscriptBox["B", "\[Rule]"]}], "    ", "=", 
+         RowBox[{
+          SubscriptBox["q\[Epsilon]", "ijk"], 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             FractionBox[
+              RowBox[{
+               RowBox[{"-", 
+                SubscriptBox["R", "j"]}], 
+               SubscriptBox["a", "k"]}], 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"], "  "}]}]], 
+             FractionBox["1", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}]]}], " ", "-", " ", 
+            RowBox[{
+             FractionBox[
+              SubscriptBox["v", "k"], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], "[", 
+             RowBox[{
+              RowBox[{
+               SubscriptBox["\[PartialD]", "j"], "R"}], "-", 
+              RowBox[{
+               RowBox[{
+                SubscriptBox["\[PartialD]", "j"], 
+                OverscriptBox["v", "\[Rule]"]}], ".", 
+               OverscriptBox["R", "\[Rule]"]}]}], "]"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          OverscriptBox["B", "\[Rule]"]}], "    ", "=", 
+         RowBox[{
+          SubscriptBox["q\[Epsilon]", "ijk"], 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             FractionBox[
+              RowBox[{
+               RowBox[{"-", 
+                SubscriptBox["R", "j"]}], 
+               SubscriptBox["a", "k"]}], 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"], "  "}]}]], 
+             FractionBox["1", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}]]}], " ", "-", " ", 
+            RowBox[{
+             FractionBox[
+              SubscriptBox["v", "k"], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], "[", 
+             RowBox[{
+              FractionBox[
+               SubscriptBox["R", "j"], 
+               RowBox[{"R", "-", 
+                RowBox[{
+                 OverscriptBox["v", "\[Rule]"], ".", 
+                 OverscriptBox["R", "\[Rule]"]}]}]], "-", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SubscriptBox["\[PartialD]", "j"], 
+                 OverscriptBox["v", "\[Rule]"]}], ")"}], ".", 
+               OverscriptBox["R", "\[Rule]"]}], "     ", "-", " ", 
+              RowBox[{
+               RowBox[{
+                SubscriptBox["\[PartialD]", "j"], 
+                OverscriptBox[
+                 RowBox[{".", "R"}], "\[Rule]"]}], 
+               OverscriptBox["v", "\[Rule]"]}]}], "]"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          OverscriptBox["B", "\[Rule]"]}], "    ", "=", 
+         RowBox[{
+          SubscriptBox["q\[Epsilon]", "ijk"], 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             FractionBox[
+              RowBox[{
+               RowBox[{"-", 
+                SubscriptBox["R", "j"]}], 
+               SubscriptBox["a", "k"]}], 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"], "  "}]}]], 
+             FractionBox["1", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}]]}], " ", "-", " ", 
+            RowBox[{
+             FractionBox[
+              SubscriptBox["v", "k"], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], "[", 
+             RowBox[{
+              FractionBox[
+               SubscriptBox["R", "j"], 
+               RowBox[{"R", "-", 
+                RowBox[{
+                 OverscriptBox["v", "\[Rule]"], ".", 
+                 OverscriptBox["R", "\[Rule]"]}]}]], "-", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 SubscriptBox["\[PartialD]", "j"], 
+                 SubscriptBox["v", "m"]}], ")"}], 
+               SubscriptBox["R", "m"]}], "    ", "-", 
+              RowBox[{
+               RowBox[{"(", " ", 
+                RowBox[{
+                 SubscriptBox["\[PartialD]", "j"], 
+                 SubscriptBox["R", "m"]}], ")"}], 
+               SubscriptBox["v", "m"]}]}], "]"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          OverscriptBox["B", "\[Rule]"]}], "    ", "=", 
+         RowBox[{
+          SubscriptBox["q\[Epsilon]", "ijk"], 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             FractionBox[
+              RowBox[{
+               RowBox[{"-", 
+                SubscriptBox["R", "j"]}], 
+               SubscriptBox["a", "k"]}], 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"], "  "}]}]], 
+             FractionBox["1", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}]]}], " ", "-", " ", 
+            RowBox[{
+             FractionBox[
+              SubscriptBox["v", "k"], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], "[", 
+             RowBox[{
+              FractionBox[
+               SubscriptBox["R", "j"], 
+               RowBox[{"R", "-", 
+                RowBox[{
+                 OverscriptBox["v", "\[Rule]"], ".", 
+                 OverscriptBox["R", "\[Rule]"]}]}]], "+", 
+              RowBox[{
+               FractionBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  SubscriptBox["a", "m"], 
+                  SubscriptBox["R", "j"]}], ")"}], 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}]], 
+               SubscriptBox["R", "m"]}], "    ", "-", 
+              RowBox[{
+               RowBox[{"(", 
+                SubscriptBox["v", "m"], ")"}], 
+               RowBox[{"(", 
+                RowBox[{
+                 SubscriptBox["\[Delta]", "jm"], " ", "+", 
+                 FractionBox[
+                  RowBox[{
+                   SubscriptBox["v", "m"], 
+                   SubscriptBox["R", "j"]}], 
+                  RowBox[{"R", "-", 
+                   RowBox[{
+                    OverscriptBox["v", "\[Rule]"], ".", 
+                    OverscriptBox["R", "\[Rule]"], "  "}]}]]}], ")"}]}]}], 
+             "]"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          OverscriptBox["B", "\[Rule]"]}], "    ", "=", 
+         RowBox[{
+          SubscriptBox["q\[Epsilon]", "ijk"], 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             FractionBox[
+              RowBox[{
+               RowBox[{"-", 
+                SubscriptBox["R", "j"]}], 
+               SubscriptBox["a", "k"]}], 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"], "  "}]}]], 
+             FractionBox["1", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}]]}], " ", "-", " ", 
+            RowBox[{
+             FractionBox[
+              SubscriptBox["v", "k"], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], "[", 
+             RowBox[{
+              FractionBox[
+               SubscriptBox["R", "j"], 
+               RowBox[{"R", "-", 
+                RowBox[{
+                 OverscriptBox["v", "\[Rule]"], ".", 
+                 OverscriptBox["R", "\[Rule]"]}]}]], "+", 
+              RowBox[{
+               FractionBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  SubscriptBox["a", "m"], 
+                  SubscriptBox["R", "j"]}], ")"}], 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}]], 
+               SubscriptBox["R", "m"]}], "    ", "-", 
+              RowBox[{"(", 
+               RowBox[{
+                SubscriptBox["v", "j"], "+", 
+                FractionBox[
+                 RowBox[{
+                  SubscriptBox["v", "m"], 
+                  SubscriptBox["R", "j"]}], 
+                 RowBox[{"R", "-", 
+                  RowBox[{
+                   OverscriptBox["v", "\[Rule]"], ".", 
+                   OverscriptBox["R", "\[Rule]"], "  "}]}]]}], ")"}]}], 
+             "]"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          OverscriptBox["B", "\[Rule]"]}], "    ", "=", 
+         RowBox[{
+          SubscriptBox["q\[Epsilon]", "ijk"], 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             FractionBox[
+              RowBox[{
+               RowBox[{"-", 
+                SubscriptBox["R", "j"]}], 
+               SubscriptBox["a", "k"]}], 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"], "  "}]}]], 
+             FractionBox["1", 
+              RowBox[{"R", "-", 
+               RowBox[{
+                OverscriptBox["v", "\[Rule]"], ".", 
+                OverscriptBox["R", "\[Rule]"]}]}]]}], " ", "-", " ", 
+            RowBox[{
+             FractionBox[
+              SubscriptBox["v", "k"], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], "[", 
+             RowBox[{
+              FractionBox[
+               SubscriptBox["R", "j"], 
+               RowBox[{"R", "-", 
+                RowBox[{
+                 OverscriptBox["v", "\[Rule]"], ".", 
+                 OverscriptBox["R", "\[Rule]"]}]}]], "+", 
+              RowBox[{
+               FractionBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  SubscriptBox["a", "m"], 
+                  SubscriptBox["R", "j"]}], ")"}], 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}]], 
+               SubscriptBox["R", "m"]}], "    ", "-", 
+              SubscriptBox["v", "j"], "-", 
+              FractionBox[
+               RowBox[{
+                RowBox[{"(", 
+                 SubscriptBox["v", "m"], ")"}], 
+                SubscriptBox["v", "m"], 
+                SubscriptBox["R", "j"]}], 
+               RowBox[{"R", "-", 
+                RowBox[{
+                 OverscriptBox["v", "\[Rule]"], ".", 
+                 OverscriptBox["R", "\[Rule]"], "  "}]}]]}], "]"}]}], 
+           "}"}]}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\[Implies]", 
+          OverscriptBox["B", "\[Rule]"]}], "    ", "=", 
+         RowBox[{
+          SubscriptBox["q\[Epsilon]", "ijk"], 
+          RowBox[{"{", 
+           RowBox[{
+            FractionBox[
+             RowBox[{
+              RowBox[{"-", 
+               SubscriptBox["R", "j"]}], 
+              SubscriptBox["a", "k"]}], 
+             RowBox[{
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"], "  "}]], 
+            " ", "-", " ", 
+            FractionBox[
+             RowBox[{
+              SubscriptBox["v", "k"], 
+              SubscriptBox["R", "j"]}], 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"R", "-", 
+                RowBox[{
+                 OverscriptBox["v", "\[Rule]"], ".", 
+                 OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"]], "+", 
+            RowBox[{
+             FractionBox[
+              RowBox[{
+               SubscriptBox["v", "k"], "(", 
+               RowBox[{
+                SubscriptBox["a", "m"], 
+                SubscriptBox["R", "j"]}], ")"}], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"]], 
+             SubscriptBox["R", "m"]}], "    ", "-", 
+            FractionBox[
+             RowBox[{"(", 
+              RowBox[{
+               SubscriptBox["v", "k"], 
+               SubscriptBox["v", "j"]}], ")"}], 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"R", "-", 
+                RowBox[{
+                 OverscriptBox["v", "\[Rule]"], ".", 
+                 OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], "+", 
+            FractionBox[
+             RowBox[{
+              RowBox[{
+               SubscriptBox["v", "k"], "(", 
+               SubscriptBox["v", "m"], ")"}], 
+              SubscriptBox["v", "m"], 
+              SubscriptBox["R", "j"]}], 
+             RowBox[{
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{"R", "-", 
+                 RowBox[{
+                  OverscriptBox["v", "\[Rule]"], ".", 
+                  OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"], 
+              "  "}]]}]}]}]}]}], "]"}], "}"}], "\[IndentingNewLine]", 
+     RowBox[{
+     "Writing", " ", "this", " ", "in", " ", "the", " ", "vector", " ", 
+      "form"}], "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\[Implies]", 
+       OverscriptBox["B", "\[Rule]"]}], "    ", "=", 
+      RowBox[{
+       SubscriptBox["q\[Epsilon]", "ijk"], 
+       RowBox[{"{", 
+        RowBox[{
+         FractionBox[
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox["R", "j"]}], 
+           SubscriptBox["a", "k"]}], 
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"R", "-", 
+              RowBox[{
+               OverscriptBox["v", "\[Rule]"], ".", 
+               OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"], "  "}]], " ", "-",
+          " ", 
+         FractionBox[
+          RowBox[{
+           SubscriptBox["v", "k"], 
+           SubscriptBox["R", "j"]}], 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"R", "-", 
+             RowBox[{
+              OverscriptBox["v", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"]], "+", 
+         FractionBox[
+          RowBox[{
+           SubscriptBox["v", "k"], 
+           SubscriptBox["R", "j"], " ", 
+           RowBox[{
+            OverscriptBox["R", "\[Rule]"], ".", 
+            OverscriptBox["a", "\[Rule]"]}]}], 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"R", "-", 
+             RowBox[{
+              OverscriptBox["v", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"]], "    ", "-", 
+         FractionBox[
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["v", "k"], 
+            SubscriptBox["v", "j"]}], ")"}], 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"R", "-", 
+             RowBox[{
+              OverscriptBox["v", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], "+", 
+         FractionBox[
+          RowBox[{
+           SubscriptBox["v", "k"], 
+           SubscriptBox["R", "j"], " ", 
+           SuperscriptBox["v", "2"]}], 
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"R", "-", 
+              RowBox[{
+               OverscriptBox["v", "\[Rule]"], ".", 
+               OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"], 
+           "  "}]]}]}]}]}]}], "]"}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", 
+     OverscriptBox["B", "\[Rule]"]}], "    ", "=", 
+    RowBox[{
+     SubscriptBox["q\[Epsilon]", "ijk"], 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        FractionBox["1", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"R", "-", 
+            RowBox[{
+             OverscriptBox["v", "\[Rule]"], ".", 
+             OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox["R", "j"]}], 
+           SubscriptBox["a", "k"]}], "-", 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["v", "k"], 
+            SubscriptBox["v", "j"]}], ")"}]}], ")"}]}], "+", 
+       RowBox[{
+        FractionBox["1", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"R", "-", 
+            RowBox[{
+             OverscriptBox["v", "\[Rule]"], ".", 
+             OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", " ", 
+            SubscriptBox["v", "k"]}], 
+           SubscriptBox["R", "j"]}], "+", 
+          RowBox[{
+           SubscriptBox["v", "k"], 
+           SubscriptBox["R", "j"], " ", 
+           RowBox[{
+            OverscriptBox["R", "\[Rule]"], ".", 
+            OverscriptBox["a", "\[Rule]"]}]}], "    ", "+", 
+          RowBox[{
+           SubscriptBox["v", "k"], 
+           SubscriptBox["R", "j"], " ", 
+           SuperscriptBox["v", "2"]}]}], ")"}]}]}], "}"}]}]}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", 
+     OverscriptBox["B", "\[Rule]"]}], "    ", "=", 
+    RowBox[{
+     SubscriptBox["q\[Epsilon]", "ijk"], 
+     RowBox[{"{", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         RowBox[{"-", 
+          OverscriptBox["R", "\[Rule]"]}], "\[Times]", 
+         OverscriptBox["a", "\[Rule]"]}], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"R", "-", 
+           RowBox[{
+            OverscriptBox["v", "\[Rule]"], ".", 
+            OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], "+", 
+       RowBox[{
+        FractionBox["1", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"R", "-", 
+            RowBox[{
+             OverscriptBox["v", "\[Rule]"], ".", 
+             OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"+", " ", 
+            OverscriptBox["v", "\[Rule]"]}], "\[Times]", 
+           OverscriptBox["R", "\[Rule]"]}], "-", 
+          RowBox[{
+           OverscriptBox["v", "\[Rule]"], "\[Times]", 
+           RowBox[{
+            OverscriptBox["R", "\[Rule]"], "(", " ", 
+            RowBox[{
+             OverscriptBox["R", "\[Rule]"], ".", 
+             OverscriptBox["a", "\[Rule]"]}], " ", ")"}]}], "   ", "-", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             OverscriptBox["v", "\[Rule]"], "\[Times]", 
+             OverscriptBox["R", "\[Rule]"]}], ")"}], 
+           SuperscriptBox["v", "2"]}]}], ")"}]}]}], "}"}]}]}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", 
+     OverscriptBox["B", "\[Rule]"]}], "    ", "=", 
+    RowBox[{
+     SubscriptBox["q\[Epsilon]", "ijk"], 
+     RowBox[{"{", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         RowBox[{"-", 
+          OverscriptBox["R", "\[Rule]"]}], "\[Times]", 
+         OverscriptBox["a", "\[Rule]"]}], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"R", "-", 
+           RowBox[{
+            OverscriptBox["v", "\[Rule]"], ".", 
+            OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], "+", 
+       RowBox[{
+        FractionBox["1", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"R", "-", 
+            RowBox[{
+             OverscriptBox["v", "\[Rule]"], ".", 
+             OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             SuperscriptBox["v", "2"]}], ")"}], 
+           OverscriptBox["v", "\[Rule]"], "\[Times]", 
+           OverscriptBox["R", "\[Rule]"]}], "-", 
+          RowBox[{
+           OverscriptBox["v", "\[Rule]"], "\[Times]", 
+           RowBox[{
+            OverscriptBox["R", "\[Rule]"], "(", " ", 
+            RowBox[{
+             OverscriptBox["R", "\[Rule]"], ".", 
+             OverscriptBox["a", "\[Rule]"]}], " ", ")"}]}]}], "   ", 
+         ")"}]}]}], "}"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Implies]", 
+      OverscriptBox["B", "\[Rule]"]}], "    ", "=", 
+     RowBox[{"q", 
+      RowBox[{"{", 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          RowBox[{"-", 
+           OverscriptBox["R", "\[Rule]"]}], "\[Times]", 
+          OverscriptBox["a", "\[Rule]"]}], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"R", "-", 
+            RowBox[{
+             OverscriptBox["v", "\[Rule]"], ".", 
+             OverscriptBox["R", "\[Rule]"]}]}], ")"}], "2"]], "+", 
+        RowBox[{
+         FractionBox["1", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"R", "-", 
+             RowBox[{
+              OverscriptBox["v", "\[Rule]"], ".", 
+              OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             SuperscriptBox["v", "2"]}], ")"}], "-", 
+           RowBox[{"(", " ", 
+            RowBox[{
+             OverscriptBox["R", "\[Rule]"], ".", 
+             OverscriptBox["a", "\[Rule]"]}], " ", ")"}]}], "   ", ")"}], 
+         OverscriptBox["v", "\[Rule]"], "\[Times]", 
+         OverscriptBox["R", "\[Rule]"]}]}], "}"}]}]}], 
+    "\[IndentingNewLine]"}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{
+     RowBox[{"\[Implies]", " ", 
+      OverscriptBox["E", "\[Rule]"]}], " ", "=", " ", 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        RowBox[{"q", "(", 
+         RowBox[{"1", "-", 
+          SuperscriptBox["v", "2"]}], ")"}], 
+        RowBox[{"(", 
+         RowBox[{
+          OverscriptBox["R", "\[Rule]"], "-", 
+          RowBox[{
+           OverscriptBox["v", "\[Rule]"], "R"}]}], ")"}]}], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"R", "-", 
+          RowBox[{
+           OverscriptBox["v", "\[Rule]"], ".", 
+           OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"]], " ", "+", " ", 
+      FractionBox[
+       RowBox[{"q", "[", 
+        RowBox[{
+         OverscriptBox["R", "\[Rule]"], " ", "\[Times]", 
+         RowBox[{"(", 
+          RowBox[{
+           OverscriptBox["R", "\[Rule]"], "-", 
+           RowBox[{
+            OverscriptBox["v", "\[Rule]"], "R"}]}], ")"}], "\[Times]", 
+         OverscriptBox["a", "\[Rule]"]}], "]"}], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"R", "-", 
+          RowBox[{
+           OverscriptBox["v", "\[Rule]"], ".", 
+           OverscriptBox["R", "\[Rule]"]}]}], ")"}], "3"]]}]}]}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+    "From", " ", "this", " ", "expression", " ", "we", " ", "can", " ", "see",
+      " ", "that", " ", "for", " ", "the", " ", "far", " ", "field"}], " "}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", " ", 
+     RowBox[{
+      RowBox[{
+       OverscriptBox["E", "\[Rule]"], "   ", "~", " ", "q"}], " ", 
+      OverscriptBox["R", "^"], " ", "\[Times]", 
+      OverscriptBox["R", "^"], " ", "\[Times]", " ", 
+      OverscriptBox["a", "\[Rule]"]}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{"Taking", " ", "the", " ", "inner", " ", "product", " ", "with", " ", 
+    OverscriptBox["R", "\[Rule]"]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     OverscriptBox["R", "\[Rule]"], ".", 
+     OverscriptBox["E", "\[Rule]"]}], " ", "=", 
+    RowBox[{
+     RowBox[{
+      OverscriptBox["R", "\[Rule]"], ".", 
+      RowBox[{"(", " ", 
+       RowBox[{"q", " ", 
+        OverscriptBox["R", "^"], " ", "\[Times]", 
+        OverscriptBox["R", "^"], " ", "\[Times]", " ", 
+        OverscriptBox["a", "\[Rule]"]}], " ", ")"}]}], " ", "=", " ", "0"}]}],
+    TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{"Hence", " ", "now", "  ", "Taking", " ", 
+    OverscriptBox["R", "\[Rule]"], "  ", "both", " ", "side"}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      OverscriptBox["R", "\[Rule]"], " ", "\[Times]", " ", 
+      OverscriptBox["E", "\[Rule]"]}], "  ", ")"}], "=", "RB"}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", "B"}], " ", "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"(", 
+       RowBox[{
+        OverscriptBox["R", "\[Rule]"], " ", "\[Times]", " ", 
+        OverscriptBox["E", "\[Rule]"]}], "  ", ")"}], 
+      RowBox[{"R", " "}]], " ", "Which", " ", "is", " ", "also", " ", "a", " ",
+      "standard", " ", "relation"}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Implies]", "B"}], " ", "=", 
+     RowBox[{
+      OverscriptBox["R", "^"], "\[Times]", " ", 
+      OverscriptBox["E", "\[Rule]"]}]}], "  "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"Taking", " ", 
+     OverscriptBox["R", "^"], " ", "both", " ", "side"}], " "}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Implies]", 
+      RowBox[{
+       OverscriptBox["R", "^"], " ", "\[Times]", 
+       OverscriptBox["B", "\[Rule]"]}]}], "=", 
+     RowBox[{
+      OverscriptBox["R", "^"], "\[Times]", 
+      OverscriptBox["R", "^"], "\[Times]", " ", 
+      OverscriptBox["E", "\[Rule]"]}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[ImplicitPlus]", 
+      RowBox[{"\[Implies]", 
+       RowBox[{
+        OverscriptBox["R", "^"], " ", "\[Times]", 
+        OverscriptBox["B", "\[Rule]"]}]}]}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", " ", 
+        RowBox[{
+         OverscriptBox["R", "^"], ".", " ", 
+         OverscriptBox["E", "\[Rule]"]}], "  ", ")"}], 
+       OverscriptBox["R", "^"]}], " ", "-", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         OverscriptBox["R", "^"], ".", 
+         OverscriptBox["R", "^"]}], ")"}], " ", 
+       OverscriptBox["E", "\[Rule]"]}]}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Implies]", 
+      RowBox[{
+       OverscriptBox["R", "^"], " ", "\[Times]", 
+       OverscriptBox["B", "\[Rule]"]}]}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", " ", 
+        RowBox[{
+         OverscriptBox["R", "^"], ".", " ", 
+         OverscriptBox["E", "\[Rule]"]}], "  ", ")"}], 
+       OverscriptBox["R", "^"]}], " ", "-", " ", 
+      OverscriptBox["E", "\[Rule]"]}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+    "For", " ", "the", " ", "far", " ", "field", " ", "we", " ", "can", " ", 
+     "apply", " ", "this", " ", "approximation", " ", "and", " ", "we", " ", 
+     "can", " ", "get"}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", 
+     RowBox[{
+      OverscriptBox["R", "^"], " ", "\[Times]", 
+      OverscriptBox["B", "\[Rule]"]}]}], "=", " ", 
+    RowBox[{
+     RowBox[{"-", " ", 
+      OverscriptBox["E", "\[Rule]"]}], "  ", "which", " ", "is", " ", "our", " ",
+      "required", " ", 
+     RowBox[{"result", ".", "\[IndentingNewLine]"}]}]}], TraditionalForm]}],
+  InitializationCell->True,ExpressionUUID->
+  "62ce7bd1-86f5-734f-991c-016bb947ce39"],
+ " "
+}], "Text",
+ CellChangeTimes->CompressedData["
+1:eJxN0m1IU1EcBvBLbFG5NHJFWOI0+5K9LDAtQ3qZlFSgiSizu9palsXU6HXF
+1ZZpbWAwG9UcpCNEZBgjsBdWjRWrDVzumsOM1ZofBFd3NmMDZw66z+mLHw4/
+Hg7ngfM/J/dUc1X9EoqiCvkF6QnHQ/ZRdP/Rnye64ZuK5FMYjha/g2X37Aen
+efWqD/XQnSbXwHa1pQNued3UCamNKQtkFUIrZHKqHFAyE3BC2mTywKHG0yFY
+mayIw1UfD8xBzY2iFFR20MIIr2/3nyyoFXzPhQv+t6Uwv1ssI7m4qRYyZ2fr
+YfxJ9jUY8DMtsPKrpxXOnflhIPuWUiN0J04+gLRQ1gu9U4Z+KFI0PCPnpdku
+kuXqSdJPrQ3+4o3JohzsNI7HIL1t7w4O85rcVQJjiQsqyCbSzsHyLHEzyake
+Bpq7lluggI30wFe2rb3EnKI+sv9SaoNSs3hDkldsG8mG2oQnF35zrMyD5uGS
+zXBaW70T+rjMOtgw1ErDdWsyVVCUsDIw4Bm7BZWBwwZYdszXBV0RiQ9KHMJR
+kp0zn2E7O/KF9NSEglB3hA1Da1I6BfOHr3Ckp1G9fp738vGBAlit81bBQt2d
+OrjvUNvVeXKPpQOLlQa322Hn/fJR6Hq+Z8VfzPFmejpkFCkZdKv0NTAskNKQ
+W+26CON5y1qg1yTSQU2t/zacKDivh4OXZk1Q+djdT/qYhUHSc9f+AlLX29+T
+c4b/sr+ZT7BcEONIHh/LWMA7ZWwSQ85oNVBm/p/LQ0SNs61vsf8AXJvuHg==
+
+  "],ExpressionUUID->"19830ea4-70a2-454f-83ec-367dfc556edb"],
+
+Cell[TextData[StyleBox["Question 2",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.9717072187270947`*^9, 
+  3.9717072275289364`*^9}},ExpressionUUID->"58a64326-0fe0-2b45-819f-\
+01885d6105e2"],
+
+Cell[TextData[StyleBox["a)",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.9717084161762733`*^9, 
+  3.971708424446913*^9}},ExpressionUUID->"f5538fca-5b24-3843-8119-\
+15bec524170f"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{"   ", 
+   RowBox[{
+    RowBox[{
+    "For", " ", "nonrelativistic", " ", "case", " ", "power", " ", "radiated",
+      " ", "by", " ", "the", " ", "charged", " ", "particle", " ", "is", " ", 
+     "at", " ", "time", " ", "t", " ", "when", " ", "its", " ", "acceltation",
+      " ", "is", " ", "a", " ", "given", " ", "by"}], " ", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", "  ", 
+    RowBox[{
+     FractionBox["dP", "d\[Omega]"], "=", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["e", "2"], 
+       SuperscriptBox["a", "2"], 
+       RowBox[{
+        SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}], " "}], 
+      RowBox[{"4", "\[Pi]"}]]}], "\[IndentingNewLine]", "    ", "\[IndentingNewLine]", 
+    RowBox[{
+    "accelration", " ", "of", " ", "the", " ", "particle", " ", "at", " ", 
+     "time", " ", "t", " ", "is", " ", "given", " ", "by"}], " ", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"z", "(", "t", ")"}], " ", "=", " ", 
+     RowBox[{"a", " ", 
+      RowBox[{"cos", "(", 
+       RowBox[{
+        SubscriptBox["\[Omega]", "o"], "t"}], ")"}]}]}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      OverscriptBox["z", "."], "(", "t", ")"}], " ", "=", " ", 
+     RowBox[{
+      RowBox[{"-", 
+       SubscriptBox["a\[Omega]", "o"]}], 
+      RowBox[{"sin", "(", 
+       RowBox[{
+        SubscriptBox["\[Omega]", "o"], "t"}], ")"}]}]}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      OverscriptBox["z", ".."], "(", "t", ")"}], " ", "=", " ", 
+     RowBox[{
+      RowBox[{"-", 
+       SuperscriptBox[
+        RowBox[{"a", "(", 
+         SubscriptBox["\[Omega]", "o"], ")"}], "2"]}], 
+      RowBox[{"cos", "(", 
+       RowBox[{
+        SubscriptBox["\[Omega]", "o"], "t"}], ")"}]}]}], "\[IndentingNewLine]", 
+    RowBox[{
+    "Hence", " ", "power", " ", "radiated", " ", "is", " ", "given", " ", 
+     "by"}], "\[IndentingNewLine]", 
+    RowBox[{
+     FractionBox["dP", "d\[Omega]"], "=", 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", 
+         SuperscriptBox[
+          RowBox[{
+           SuperscriptBox["a", "2"], "(", 
+           SubscriptBox["\[Omega]", "o"], ")"}], "4"]}], 
+        RowBox[{
+         SuperscriptBox["cos", "2"], "(", 
+         RowBox[{
+          SubscriptBox["\[Omega]", "o"], "t"}], ")"}], 
+        SuperscriptBox["e", "2"], 
+        RowBox[{
+         SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}], " "}], 
+       RowBox[{"4", "\[Pi]"}]], "  ", "Here", " ", "\[Theta]", " ", "is", " ",
+       "angle", " ", "from", " ", "the", " ", "z", " ", 
+      RowBox[{"axis", "."}]}]}]}]}], 
+  TraditionalForm]],ExpressionUUID->"dbbee277-4ffd-4846-b180-5aa7d5018dd5"]], \
+"Text",
+ CellChangeTimes->{{3.9717072295673866`*^9, 3.971707231655895*^9}, {
+  3.9717075657639427`*^9, 3.9717078208368187`*^9}, {3.9717079935519924`*^9, 
+  3.9717081637342567`*^9}, {3.9719979406946716`*^9, 
+  3.971998011700819*^9}},ExpressionUUID->"2cd2f3ae-c566-6644-b434-\
+ed04e2347279"],
+
+Cell["b)", "Text",
+ CellChangeTimes->{{3.9717084268737774`*^9, 3.971708433384794*^9}},
+ FontWeight->"Bold",ExpressionUUID->"725f3c40-45ba-744c-8f92-06a4e1226e59"],
+
+Cell[TextData[{
+ " ",
+ Cell[BoxData[{
+  FormBox[
+   RowBox[{
+    RowBox[{
+    "Let", " ", "us", " ", "again", " ", "used", " ", "the", " ", "formula", " ",
+      "for", " ", "power", " ", "radiated", " ", "by", " ", "the", " ", 
+     "charged", " ", "particle", " ", "at", " ", "time", " ", "t", " ", 
+     "when", " ", "its", " ", "accelaration", " ", "is", " ", "a"}], " ", 
+    "\[IndentingNewLine]", " "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{"  ", 
+    RowBox[{
+     FractionBox["dP", "d\[Omega]"], "=", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["e", "2"], 
+       SuperscriptBox["a", "2"], 
+       RowBox[{
+        SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}], " "}], 
+      RowBox[{"4", "\[Pi]"}]]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{
+    "postition", " ", "vector", " ", "of", " ", "the", " ", "partilce", " ", 
+     "is", " ", "given", " ", "by"}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    OverscriptBox[
+     RowBox[{"r", "(", "t", ")"}], "\[Rule]"], "  ", "=", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"R", " ", 
+       RowBox[{"Cos", "(", 
+        RowBox[{
+         SubscriptBox["\[Omega]", "o"], "t"}], ")"}]}], " ", ",", 
+      RowBox[{"R", "  ", 
+       RowBox[{"sin", "(", 
+        RowBox[{
+         SubscriptBox["\[Omega]", "o"], "t"}], ")"}]}], " ", ",", " ", "0"}], 
+     ")"}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    OverscriptBox[
+     RowBox[{"v", "(", "t", ")"}], "\[Rule]"], "  ", "=", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "R"}], " ", 
+       SubscriptBox["\[Omega]", "o"], 
+       RowBox[{"Sin", "(", 
+        RowBox[{
+         SubscriptBox["\[Omega]", "o"], "t"}], ")"}]}], " ", ",", 
+      RowBox[{
+       SubscriptBox["R\[Omega]", "o"], "  ", 
+       RowBox[{"Cos", "(", 
+        RowBox[{
+         SubscriptBox["\[Omega]", "o"], "t"}], ")"}]}], " ", ",", " ", "0"}], 
+     ")"}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    OverscriptBox[
+     RowBox[{"a", "(", "t", ")"}], "\[Rule]"], "  ", "=", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "R"}], " ", 
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "o"], "2"], " ", 
+       RowBox[{"Cos", "(", 
+        RowBox[{
+         SubscriptBox["\[Omega]", "o"], "t"}], ")"}]}], " ", ",", 
+      RowBox[{"R", " ", 
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "o"], "2"], "  ", 
+       RowBox[{"Sin", "(", 
+        RowBox[{
+         SubscriptBox["\[Omega]", "o"], "t"}], ")"}]}], " ", ",", " ", "0"}], 
+     ")"}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    SuperscriptBox["a", "2"], "   ", "=", " ", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "R"}], " ", 
+        SuperscriptBox[
+         SubscriptBox["\[Omega]", "o"], "2"], " ", 
+        RowBox[{"Cos", "(", 
+         RowBox[{
+          SubscriptBox["\[Omega]", "o"], "t"}], ")"}]}], ")"}], "2"], " ", "+",
+      " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"R", " ", 
+        SuperscriptBox[
+         SubscriptBox["\[Omega]", "o"], "2"], "  ", 
+        RowBox[{"Sin", "(", 
+         RowBox[{
+          SubscriptBox["\[Omega]", "o"], "t"}], ")"}]}], " ", ")"}], "2"]}]}],
+    TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["a", "2"], "   ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["R", "2"], " ", 
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "o"], "4"], " ", 
+       RowBox[{
+        SuperscriptBox["Cos", "2"], "(", 
+        RowBox[{
+         SubscriptBox["\[Omega]", "o"], "t"}], ")"}]}], " ", "+", " ", 
+      RowBox[{
+       SuperscriptBox["R", "2"], " ", 
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "o"], "4"], "  ", 
+       RowBox[{
+        SuperscriptBox["Sin", "2"], "(", 
+        RowBox[{
+         SubscriptBox["\[Omega]", "o"], "t"}], ")"}]}]}]}], " "}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["a", "2"], "   ", "=", " ", 
+     RowBox[{
+      SuperscriptBox["R", "2"], " ", 
+      SuperscriptBox[
+       SubscriptBox["\[Omega]", "o"], "4"]}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+   "Putting", " ", "this", " ", "into", " ", "above", " ", "we", " ", "will", 
+    " ", "get"}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    FractionBox["dP", "d\[Omega]"], "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["e", "2"], 
+       SuperscriptBox["R", "2"], " ", 
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "o"], "4"], " ", 
+       RowBox[{
+        SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}], " "}], 
+      RowBox[{"4", "\[Pi]"}]], 
+     "\[IndentingNewLine]" FormBox[Null, TraditionalForm]}]}], 
+   TraditionalForm]}],ExpressionUUID->"71a7400f-e21d-7c40-a652-984160e57886"]
+}], "Text",
+ CellChangeTimes->{{3.9717084348845673`*^9, 
+  3.971708868765373*^9}},ExpressionUUID->"7ccfde0e-4749-eb49-a30f-\
+06ec26034680"],
+
+Cell[TextData[StyleBox["Question 3",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.971812392338606*^9, 
+  3.9718123994319363`*^9}},ExpressionUUID->"1ccb3d78-d0c4-094c-85d0-\
+50f38f5712d0"],
+
+Cell[TextData[Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+    FractionBox["dP", "d\[CapitalOmega]"], "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["q", "2"], 
+       SuperscriptBox["a", "2"], 
+       RowBox[{
+        SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}], " "}], 
+      RowBox[{"4", "\[Pi]"}]], 
+     StyleBox[
+      RowBox[{"    ", 
+       StyleBox[" ",
+        FontWeight->"Bold"]}]], 
+     StyleBox[
+      RowBox[{"Dr", ".", " ", "Chris"}],
+      FontWeight->"Bold"], 
+     StyleBox[" ",
+      FontWeight->"Bold"], 
+     StyleBox["pope",
+      FontWeight->"Bold"], 
+     StyleBox[" ",
+      FontWeight->"Bold"], 
+     StyleBox["notes",
+      FontWeight->"Bold"], 
+     StyleBox[" ",
+      FontWeight->"Bold"], 
+     StyleBox["7.81",
+      FontWeight->"Bold"]}]}], 
+   StyleBox[" ",
+    FontWeight->"Bold"], "\[IndentingNewLine]"}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Integral]", 
+     RowBox[{
+      FractionBox["dP", "d\[CapitalOmega]"], "d\[CapitalOmega]"}]}], " ", "=", 
+    RowBox[{"\[Integral]", 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["q", "2"], 
+        SuperscriptBox["a", "2"], 
+        RowBox[{
+         SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}], " "}], 
+       RowBox[{"4", "\[Pi]"}]], "d\[CapitalOmega]"}]}]}], " "}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"P", " ", "=", " ", 
+   RowBox[{"\[Integral]", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["q", "2"], 
+       SuperscriptBox["a", "2"], 
+       RowBox[{
+        SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}], " "}], 
+      RowBox[{"4", "\[Pi]"}]], 
+     RowBox[{"sin", "(", "\[Theta]", ")"}], "d\[Theta]", " ", "d\[Phi]"}]}]}],
+   TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"P", " ", "=", " ", 
+   RowBox[{"2", "\[Pi]", 
+    RowBox[{"\[Integral]", 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["q", "2"], 
+        SuperscriptBox["a", "2"], 
+        RowBox[{
+         SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}], " "}], 
+       RowBox[{"4", "\[Pi]"}]], 
+      RowBox[{"sin", "(", "\[Theta]", ")"}], "d\[Theta]"}]}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{" ", 
+   RowBox[{"P", " ", "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"(", " ", 
+       RowBox[{"2", "\[Pi]", " ", 
+        SuperscriptBox["q", "2"], 
+        SuperscriptBox["a", "2"]}], ")"}], 
+      RowBox[{"4", "\[Pi]"}]], 
+     RowBox[{"\[Integral]", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox["sin", "3"], "(", "\[Theta]", ")"}], " ", 
+       "d\[Theta]"}]}]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"P", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{" ", 
+        RowBox[{"2", 
+         SuperscriptBox["q", "2"], 
+         SuperscriptBox["a", "2"]}]}], "3"], "                     ", 
+      StyleBox["--",
+       FontWeight->"Bold"]}], 
+     StyleBox["--",
+      FontWeight->"Bold"]}], 
+    StyleBox[">",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox[
+     RowBox[{"7.83", "  ", 
+      RowBox[{"Dr", ".", " ", "Chris"}], " ", "Pope", " ", "notes"}],
+     FontWeight->"Bold"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"position", " ", "vector", " ", "of", " ", "first", " ", "charge"}],
+   TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   OverscriptBox[
+    SubscriptBox["r", "1"], "\[Rule]"], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"acos", "(", "\[Omega]t", ")"}], " ", ",", 
+       RowBox[{"a", "(", "sinwt", ")"}], ",", "0"}], ")"}], "  ", "\[Implies]", 
+     OverscriptBox[
+      SubscriptBox["a", "1"], "\[Rule]"]}], " ", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        SuperscriptBox["\[Omega]", "2"]}], 
+       OverscriptBox[
+        SubscriptBox["r", "1"], "\[Rule]"]}], "   ", "\[Implies]", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        SubscriptBox["a", "1"], ")"}], "2"]}], " ", "=", " ", 
+     RowBox[{
+      SuperscriptBox["\[Omega]", "4"], 
+      SuperscriptBox["a", "2"]}]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   OverscriptBox[
+    SubscriptBox["r", "2"], "\[Rule]"], "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"acos", "(", "\[Omega]t", ")"}], " ", ",", 
+       RowBox[{"a", "(", "sinwt", ")"}], ",", "0"}], ")"}], "  ", "\[Implies]", 
+     OverscriptBox[
+      SubscriptBox["a", "1"], "\[Rule]"]}], " ", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        SuperscriptBox["\[Omega]", "2"]}], 
+       OverscriptBox[
+        SubscriptBox["r", "1"], "\[Rule]"]}], "   ", "\[Implies]", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        SubscriptBox["a", "2"], ")"}], "2"]}], " ", "=", " ", 
+     RowBox[{
+      SuperscriptBox["\[Omega]", "4"], 
+      SuperscriptBox["a", "2"]}]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"P", " ", "=", " ", 
+   RowBox[{
+    SubscriptBox["\[CapitalSigma]", "i"], 
+    FractionBox[
+     RowBox[{" ", 
+      RowBox[{"2", 
+       SuperscriptBox[
+        SubscriptBox["q", "i"], "2"], 
+       SuperscriptBox[
+        SubscriptBox["a", "i"], "2"]}]}], "3"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+  "For", " ", "our", " ", "case", " ", "total", " ", "power", " ", "radiated",
+    " ", "is", " ", "given", " ", "by"}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"P", " ", "=", " ", 
+   RowBox[{
+    FractionBox[
+     RowBox[{" ", 
+      RowBox[{"2", 
+       SuperscriptBox["q", "2"]}]}], "3"], 
+    RowBox[{"(", 
+     RowBox[{"2", 
+      SuperscriptBox["\[Omega]", "4"], 
+      SuperscriptBox["a", "2"]}], ")"}], "   ", 
+    RowBox[{"{", 
+     RowBox[{
+      StyleBox["Note",
+       FontWeight->"Bold"], 
+      StyleBox[":",
+       FontWeight->"Bold"], " ", 
+      RowBox[{"here", " ", "a", " ", "is", " ", "not", " ", 
+       RowBox[{"acceltation", ".", " ", "it"}], " ", "is", " ", "half", " ", 
+       "of", " ", "the", " ", "length", " ", "of", " ", "the", " ", "bar"}]}],
+      "}"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"P", " ", "=", " ", 
+   RowBox[{
+    FractionBox[
+     RowBox[{" ", 
+      RowBox[{"4", 
+       SuperscriptBox["q", "2"]}]}], "3"], 
+    SuperscriptBox["\[Omega]", "4"], 
+    SuperscriptBox["a", "2"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"P", " ", "=", " ", 
+   FractionBox[
+    RowBox[{"-", "dE"}], 
+    RowBox[{"dt", "\[IndentingNewLine]"}]]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   FractionBox[
+    RowBox[{"-", "dE"}], 
+    RowBox[{"    ", 
+     RowBox[{"dt", "\[IndentingNewLine]"}]}]], " ", "=", " ", 
+   RowBox[{
+    FractionBox[
+     RowBox[{" ", 
+      RowBox[{"4", 
+       SuperscriptBox["q", "2"]}]}], "3"], 
+    SuperscriptBox["\[Omega]", "4"], 
+    SuperscriptBox["a", "2"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"We", " ", "are", " ", "changeing", " ", "energy", " ", "from", " ", 
+    SubscriptBox["E", "0"]}], " ", "->", " ", 
+   FractionBox[
+    SubscriptBox["E", "0"], "2"]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"E", " ", "=", " ", 
+   RowBox[{
+    FractionBox["1", "2"], 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["ma", "2"], 
+        SuperscriptBox["\[Omega]", "2"]}], ")"}], "+", 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["ma", "2"], 
+        SuperscriptBox["\[Omega]", "2"]}], ")"}]}], "}"}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"E", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["ma", "2"], 
+      SuperscriptBox["\[Omega]", "2"]}], "   ", "\[Implies]", " ", 
+     FractionBox["dE", "dt"]}], " ", "=", " ", 
+    RowBox[{"2", 
+     SuperscriptBox["ma", "2"], "\[Omega]", 
+     FractionBox["d\[Omega]", "dt"]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"hence", " ", 
+    SubscriptBox["\[Omega]", "o"]}], "=", " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     FractionBox["E", 
+      SuperscriptBox["ma", "2"]], ")"}], 
+    RowBox[{"1", "/", "2"}]]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"t", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"0", " ", "\[Implies]", "Energy"}], " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["E", "o"], " ", "and", " ", "\[Omega]"}], " ", "=", " ", 
+     SubscriptBox["\[Omega]", "o"]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"t", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["t", 
+      FractionBox["1", "2"]], " ", "\[Implies]", " ", "Energy"}], " ", "=", 
+    " ", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       SubscriptBox["E", "o"], "2"], " ", "and", " ", "\[Omega]"}], " ", "=", 
+     " ", 
+     FractionBox[
+      SubscriptBox["\[Omega]", "0"], 
+      RowBox[{"\[Sqrt]", "2"}]]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Implies]", 
+    RowBox[{"2", 
+     SuperscriptBox["ma", "2"], "\[Omega]", 
+     FractionBox["d\[Omega]", "dt"]}]}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{"-", " ", 
+     FractionBox[
+      RowBox[{" ", 
+       RowBox[{"4", 
+        SuperscriptBox["q", "2"]}]}], "3"]}], 
+    SuperscriptBox["\[Omega]", "4"], 
+    SuperscriptBox["a", "2"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Implies]", " ", 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", " ", "4"}], 
+        SuperscriptBox["q", "2"]}], "3"], 
+      SuperscriptBox["\[Omega]", "4"]}]}], "  ", "=", "  ", 
+    RowBox[{"2", "m\[Omega]", 
+     FractionBox["d\[Omega]", "dt"]}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Implies]", 
+    FractionBox["d\[Omega]", "dt"]}], " ", "=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"-", " ", "2"}], 
+      SuperscriptBox["q", "2"]}], "3"], 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       SuperscriptBox["\[Omega]", "3"], " ", ")"}], " "}], "m"]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Implies]", 
+     FractionBox["d\[Omega]", 
+      SuperscriptBox["\[Omega]", "3"]]}], " ", "=", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{" ", 
+        RowBox[{"2", 
+         SuperscriptBox["q", "2"]}]}], "3"]}], 
+     FractionBox[
+      RowBox[{"1", "  "}], "m"], "dt"}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Implies]", 
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", 
+       SubscriptBox["\[Omega]", "o"], 
+       FractionBox[
+        SubscriptBox["\[Omega]", "0"], 
+        RowBox[{"\[Sqrt]", "2"}]]], 
+      RowBox[{
+       FractionBox["1", 
+        SuperscriptBox["\[Omega]", "3"]], 
+       RowBox[{"\[DifferentialD]", "\[Omega]"}]}]}]}], " ", "=", 
+    RowBox[{"-", " ", 
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", "0", 
+       SubscriptBox["t", 
+        RowBox[{"1", "/", "2"}]]], 
+      RowBox[{
+       FractionBox[
+        RowBox[{" ", 
+         RowBox[{"2", 
+          SuperscriptBox["q", "2"]}]}], "3"], 
+       FractionBox[
+        RowBox[{"1", "  "}], "m"], 
+       RowBox[{"\[DifferentialD]", "t"}]}]}]}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Implies]", " ", 
+     SubsuperscriptBox[
+      RowBox[{"[", 
+       FractionBox[
+        RowBox[{"-", "3"}], 
+        SuperscriptBox["\[Omega]", "2"]], "]"}], 
+      SubscriptBox["\[Omega]", "o"], 
+      FractionBox[
+       SubscriptBox["\[Omega]", "0"], 
+       RowBox[{"\[Sqrt]", "2"}]]]}], "  ", "=", 
+    RowBox[{
+     RowBox[{"-", " ", 
+      FractionBox[
+       RowBox[{" ", 
+        RowBox[{"2", 
+         SuperscriptBox["q", "2"]}]}], "3"]}], 
+     SubsuperscriptBox[
+      RowBox[{
+       FractionBox[
+        RowBox[{"1", "  "}], "m"], "[", "t", "]"}], "0", 
+      SubscriptBox["t", 
+       RowBox[{"1", "/", "2"}]]]}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Implies]", 
+     RowBox[{"3", 
+      RowBox[{"{", 
+       RowBox[{
+        FractionBox["1", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           FractionBox[
+            SubscriptBox["\[Omega]", "0"], 
+            RowBox[{"\[Sqrt]", "2"}]], ")"}], "2"]], "-", 
+        FractionBox["1", 
+         SuperscriptBox[
+          SubscriptBox["\[Omega]", "0"], "2"]]}], " ", "}"}]}]}], " ", "=", 
+    " ", 
+    RowBox[{
+     FractionBox[
+      RowBox[{" ", 
+       RowBox[{"2", 
+        SuperscriptBox["q", "2"]}]}], "3"], 
+     FractionBox[
+      RowBox[{"1", "  "}], "m"], 
+     SubscriptBox["t", 
+      RowBox[{"1", "/", "2"}]]}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Implies]", 
+     RowBox[{"3", 
+      RowBox[{"{", 
+       RowBox[{
+        FractionBox["1", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           FractionBox[
+            SubscriptBox["\[Omega]", "0"], 
+            RowBox[{"\[Sqrt]", "2"}]], ")"}], "2"]], "-", 
+        FractionBox["1", 
+         SuperscriptBox[
+          SubscriptBox["\[Omega]", "0"], "2"]]}], " ", "}"}]}]}], " ", "=", 
+    " ", 
+    RowBox[{
+     FractionBox[
+      RowBox[{" ", 
+       RowBox[{"2", 
+        SuperscriptBox["q", "2"]}]}], "3"], 
+     FractionBox[
+      RowBox[{" ", "1", " "}], "m"], 
+     SubscriptBox["t", 
+      RowBox[{"1", "/", "2"}]]}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{" ", 
+   RowBox[{
+    RowBox[{"\[Implies]", " ", 
+     RowBox[{
+      FractionBox[
+       RowBox[{" ", 
+        RowBox[{"2", 
+         SuperscriptBox["q", "2"]}]}], "3"], 
+      FractionBox[
+       RowBox[{" ", "1", " "}], "m"], 
+      SubscriptBox["t", 
+       RowBox[{"1", "/", "2"}]]}]}], "=", " ", 
+    RowBox[{"3", 
+     RowBox[{"{", 
+      RowBox[{
+       FractionBox["2", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          SubscriptBox["\[Omega]", "0"], ")"}], "2"]], "-", 
+       FractionBox["1", 
+        SuperscriptBox[
+         SubscriptBox["\[Omega]", "0"], "2"]]}], " ", "}"}]}]}], " "}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Implies]", 
+     RowBox[{"3", 
+      FractionBox["1", 
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "0"], "2"]]}]}], " ", "=", "  ", 
+    RowBox[{
+     FractionBox[
+      RowBox[{" ", 
+       RowBox[{"2", 
+        SuperscriptBox["q", "2"]}]}], "3"], 
+     FractionBox[
+      RowBox[{"1", "  "}], "m"], 
+     SubscriptBox["t", 
+      RowBox[{"1", "/", "2"}]]}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Implies]", " ", 
+     SubscriptBox["t", 
+      RowBox[{"1", "/", "2"}]]}], " ", "=", " ", 
+    FractionBox[
+     RowBox[{"9", "m"}], 
+     RowBox[{"2", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        SubscriptBox["\[Omega]", "0"], ")"}], "2"], 
+      SuperscriptBox["q", "2"]}]]}], "   "}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Implies]", " ", 
+    SubscriptBox["t", 
+     RowBox[{"1", "/", "2"}]]}], " ", "=", " ", 
+   FractionBox[
+    RowBox[{"9", 
+     SuperscriptBox["m", "2"], " ", 
+     SuperscriptBox["a", "2"]}], 
+    RowBox[{"2", "E", " ", 
+     SuperscriptBox["q", "2"]}]], "   "}], 
+  TraditionalForm]}],ExpressionUUID->"2d6f2a95-f07c-eb48-9a8a-a554df9eb131"]],\
+ "Text",
+ CellChangeTimes->{{3.9718124073851357`*^9, 3.971812447731045*^9}, {
+  3.9718124941987*^9, 3.9718127070258236`*^9}, {3.9718164433247356`*^9, 
+  3.9718164945207253`*^9}, {3.971816548910284*^9, 3.97181672201058*^9}, {
+  3.9718167881344337`*^9, 3.971816865595852*^9}, {3.9718213133638725`*^9, 
+  3.971821353989298*^9}, {3.9718213903389664`*^9, 3.971821922495119*^9}, {
+  3.9718219699991474`*^9, 3.9718220836044254`*^9}, {3.9718221437182007`*^9, 
+  3.971822256418747*^9}, {3.9718222967234936`*^9, 3.971822617401615*^9}, {
+  3.971822653692589*^9, 3.9718230553680515`*^9}, {3.971823111428503*^9, 
+  3.971823275016247*^9}, {3.971998262050625*^9, 3.971998279487404*^9}, {
+  3.9719985361685753`*^9, 3.971998539028057*^9}, {3.9719987188985195`*^9, 
+  3.971998885067465*^9}, {3.9719989167962875`*^9, 3.971998930923094*^9}, {
+  3.9719989647818832`*^9, 
+  3.9719989665548553`*^9}},ExpressionUUID->"e3312cf7-d3a5-9b41-8725-\
+d5e4224cc6cd"],
+
+Cell[TextData[StyleBox["Question 4",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.971708876737198*^9, 3.971708882451292*^9}, {
+  3.971708946488411*^9, 
+  3.971708955147526*^9}},ExpressionUUID->"775b7da2-284d-8243-b2dc-\
+5a20c0634168"],
+
+Cell[TextData[{
+ "Given that charge is moving non relativistically in a x-y plane of a \
+constant magnetic field ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    OverscriptBox["B", "\[Rule]"], " ", "=", " ", 
+    RowBox[{"(", 
+     RowBox[{"0", ",", "0", ",", 
+      RowBox[{"B", " ", 
+       OverscriptBox["z", "^"]}]}], ")"}]}], TraditionalForm]],ExpressionUUID->
+  "8dfbc45a-8cf4-0945-883b-5b8e94b30405"],
+ " with velocity \n",
+ Cell[BoxData[{
+  FormBox[
+   RowBox[{
+   "Let", " ", "us", " ", "firstly", " ", "find", " ", "the", " ", "motion", " ",
+     "of", " ", "the", " ", "charged", " ", "particle", " ", "in", " ", 
+    "such", " ", "a", " ", "field"}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{"Lorentz", " ", "force", " ", "equation", " ", "is"}]}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    SuperscriptBox["f", "\[Mu]"], " ", "=", " ", 
+    RowBox[{"e", " ", 
+     SuperscriptBox["F", "\[Mu]\[Nu]"], 
+     SubscriptBox["U", "\[Vee]"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+    "spatical", " ", "component", " ", "is", " ", "given", " ", "by"}], " "}],
+    TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["f", "i"], " ", "=", " ", 
+     RowBox[{
+      RowBox[{"e", " ", 
+       SuperscriptBox["F", "i\[Nu]"], 
+       SubscriptBox["U", "\[Vee]"]}], " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["eF", "i0"], 
+         SubscriptBox["U", "0"]}], " ", "+", " ", 
+        RowBox[{"e", " ", 
+         SuperscriptBox["F", "ij"], 
+         SubscriptBox["U", "j"]}]}], " ", "=", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"e", "(", 
+          RowBox[{"-", 
+           SubscriptBox["E", "i"]}], ")"}], 
+         RowBox[{"(", 
+          RowBox[{"-", "\[Gamma]"}], ")"}]}], " ", "+", " ", 
+        RowBox[{"e", " ", 
+         SubscriptBox["\[Epsilon]", "ijk"], " ", 
+         SubscriptBox["B", "k"], "\[Gamma]", " ", 
+         SubscriptBox["v", "j"]}]}]}]}]}], "  "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"for", " ", "our", " ", "case", " ", "E"}], " ", "=", " ", "0"}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox["hence", TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["f", "i"], " ", "=", " ", 
+     RowBox[{"e", " ", 
+      SubscriptBox["\[Epsilon]", "ijk"], " ", 
+      SubscriptBox["B", "k"], "\[Gamma]", " ", 
+      SubscriptBox["v", "j"]}]}], "  "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    SuperscriptBox["f", "i"], " ", "=", " ", 
+    FractionBox[
+     SuperscriptBox["dm\[Gamma]v", "i"], "dt"]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+   "in", " ", "the", " ", "absence", " ", "of", " ", "the", " ", "electric", " ",
+     "field", " ", "\[Gamma]", " ", "is", " ", "constant", "  ", "hence"}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Gamma]m", 
+      FractionBox[
+       SuperscriptBox["dv", "i"], "dt"]}], "=", " ", 
+     RowBox[{"e", " ", 
+      SubscriptBox["\[Epsilon]", "ijk"], " ", 
+      SubscriptBox["B", "k"], 
+      SubscriptBox["\[Gamma]v", "j"]}]}], "  "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"m", 
+      FractionBox[
+       SuperscriptBox["dv", "i"], "dt"]}], "=", " ", 
+     RowBox[{"e", " ", 
+      SubscriptBox["\[Epsilon]", "ijk"], " ", 
+      SubscriptBox["B", "k"], 
+      SubscriptBox["v", "j"]}]}], "  "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+   "it", " ", "is", " ", "given", " ", "that", "  ", "magnetic", " ", "field",
+     " ", "is", " ", 
+    RowBox[{"(", 
+     RowBox[{"0", ",", "0", ",", 
+      RowBox[{"B", " ", 
+       OverscriptBox["z", "^"]}]}], ")"}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{"hence", " "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"m", 
+      FractionBox[
+       SuperscriptBox["dv", "i"], "dt"]}], "=", " ", 
+     RowBox[{"e", " ", 
+      SubscriptBox["\[Epsilon]", "ijk"], " ", 
+      SubscriptBox["B", "k"], 
+      SubscriptBox["v", "j"]}]}], "  "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+   "let", " ", "us", " ", "write", " ", "now", " ", "every", " ", "componet", 
+    " ", "of", " ", "the", " ", "velocity"}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    FractionBox[
+     SubscriptBox["dv", "x"], "dt"], "=", " ", 
+    RowBox[{"\[Omega]", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          SubscriptBox["v", "y"], "   ", "--"}], "--"}], "--"}], "--"}], 
+      "--"}], 
+     RowBox[{"(", "1", ")"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    FractionBox[
+     SubscriptBox["dv", "y"], "dt"], "=", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", " ", "\[Omega]"}], " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           SubscriptBox["v", "x"], "    ", "--"}], "--"}], "--"}], "--"}]}], "-", 
+      RowBox[{
+       RowBox[{"(", "2", ")"}], "    ", "where", " ", "\[Omega]"}]}], " ", "=",
+      " ", 
+     FractionBox["qB", "m"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"m", 
+     FractionBox[
+      SubscriptBox["dv", "z"], "dt"]}], "=", " ", 
+    RowBox[{
+     RowBox[{"0", "   ", "\[Implies]", " ", 
+      SubscriptBox["v", "z"]}], " ", "=", " ", "c"}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{"Solving", " ", 
+    RowBox[{"(", "1", ")"}], " ", "and", " ", 
+    RowBox[{"(", "2", ")"}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"d", "(", 
+      RowBox[{
+       SubscriptBox["v", 
+        RowBox[{"x", " "}]], "+", 
+       SubscriptBox["iv", "y"]}], ")"}], "dt"], " ", "=", " ", 
+    RowBox[{"-", 
+     RowBox[{"i\[Omega]", "(", 
+      RowBox[{
+       SubscriptBox["v", 
+        RowBox[{"x", " "}]], "+", 
+       SubscriptBox["iv", "y"]}], ")"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+   "By", " ", "solving", " ", "this", " ", "we", " ", "will", " ", "get"}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["v", 
+      RowBox[{"x", " "}]], "+", 
+     SubscriptBox["iv", "y"]}], " ", "=", " ", 
+    RowBox[{
+     SubscriptBox["v", "0"], 
+     SuperscriptBox["e", 
+      RowBox[{"-", 
+       RowBox[{"i", "(", 
+        RowBox[{"\[Omega]t", "+", "\[Alpha]"}], ")"}]}]]}]}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", 
+     SubscriptBox["v", 
+      RowBox[{"x", " "}]]}], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["v", "0"], 
+      RowBox[{"cos", "(", 
+       RowBox[{"\[Omega]t", "+", "\[Alpha]"}], ")"}], " ", "and", " ", 
+      SubscriptBox["v", 
+       RowBox[{"y", " "}]]}], "=", " ", 
+     RowBox[{
+      RowBox[{"-", 
+       SubscriptBox["v", "0"]}], 
+      RowBox[{"sin", "(", 
+       RowBox[{"\[Omega]t", "+", "\[Alpha]"}], ")"}]}]}]}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    OverscriptBox["v", "\[Rule]"], " ", "=", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["v", "0"], 
+       RowBox[{"cos", "(", 
+        RowBox[{"\[Omega]t", "+", "\[Alpha]"}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"-", 
+        SubscriptBox["v", "0"]}], 
+       RowBox[{"sin", "(", 
+        RowBox[{"\[Omega]t", "+", "\[Alpha]"}], ")"}]}], ",", "0"}], ")"}]}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    OverscriptBox["v", "\[Rule]"], " ", "=", " ", 
+    RowBox[{"\[Omega]", "(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        SubscriptBox["v", "0"]}], 
+       RowBox[{"sin", "(", 
+        RowBox[{"\[Omega]t", "+", "\[Alpha]"}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"-", 
+        SubscriptBox["v", "0"]}], 
+       RowBox[{"cos", "(", 
+        RowBox[{"\[Omega]t", "+", "\[Alpha]"}], ")"}]}], ",", "0"}], ")"}]}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    SuperscriptBox["a", "2"], " ", "=", " ", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       SubscriptBox["v", "0"], ")"}], "2"], 
+     SuperscriptBox["\[Omega]", "2"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+   "Power", " ", "radiated", " ", "by", " ", "the", " ", "charge", " ", 
+    "particle", " ", "is"}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{"P", " ", "=", " ", 
+    FractionBox[
+     RowBox[{" ", 
+      RowBox[{"2", 
+       SuperscriptBox["q", "2"], 
+       SuperscriptBox["a", "2"]}]}], "3"]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{"P", " ", "=", " ", 
+    RowBox[{
+     FractionBox[
+      RowBox[{" ", 
+       RowBox[{"2", 
+        SuperscriptBox["q", "2"], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          SubscriptBox["v", "0"], ")"}], "2"], 
+        SuperscriptBox["\[Omega]", "2"]}]}], "3"], "=", 
+     FractionBox[
+      RowBox[{" ", 
+       RowBox[{"2", 
+        SuperscriptBox["q", "4"], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          SubscriptBox["v", "0"], ")"}], "2"], 
+        SuperscriptBox["B", "2"]}]}], 
+      RowBox[{"3", 
+       SuperscriptBox["m", "2"]}]]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{"P", " ", "=", " ", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"-", "dE"}], "dt"], "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[Gamma]E", "                                 ", "--"}], 
+        "--"}], "--"}], "-", 
+      RowBox[{"(", "1", ")"}]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"E", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        FractionBox["1", "2"], 
+        SuperscriptBox["mv", "2"]}], " ", "\[Implies]", 
+       SuperscriptBox["v", "2"]}], "  ", "=", " ", 
+      FractionBox[
+       RowBox[{"2", "E"}], "m"]}]}], "\[IndentingNewLine]"}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"hence", " ", "P"}], " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{" ", 
+        RowBox[{"4", 
+         SuperscriptBox["q", "4"], 
+         SuperscriptBox["B", "2"]}]}], 
+       RowBox[{"3", 
+        SuperscriptBox["m", "3"]}]], 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"E", "                  ", "--"}], "--"}], "--"}], "--"}], 
+       "--"}]}], "-", 
+     RowBox[{"(", "2", ")"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{"Comparing", " ", 
+    RowBox[{"(", "1", ")"}], " ", "and", " ", 
+    RowBox[{"(", "2", ")"}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{"we", " ", "will", " ", "get"}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{"\[Gamma]", " ", "=", " ", 
+    FractionBox[
+     RowBox[{" ", 
+      RowBox[{"4", 
+       SuperscriptBox["q", "4"], 
+       SuperscriptBox["B", "2"]}]}], 
+     RowBox[{"3", 
+      SuperscriptBox["m", "3"]}]]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+   "Solving", " ", "this", " ", "differential", " ", "equation", " ", "we", " ",
+     "will", " ", "get"}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"-", "dE"}], "dt"], "=", " ", "\[Gamma]E"}], " "}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", 
+      SubscriptBox["E", "0"], 
+      FractionBox[
+       SubscriptBox["E", "0"], "2"]], 
+     FractionBox["dE", "E"]}], " ", "=", " ", 
+    RowBox[{
+     RowBox[{"-", "\[Gamma]"}], 
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", "0", 
+       SubscriptBox["t", 
+        RowBox[{"1", "/", "2"}]]], 
+      RowBox[{"\[DifferentialD]", "t"}]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", 
+     RowBox[{"log", "(", 
+      FractionBox["1", "2"], ")"}]}], " ", "=", " ", 
+    RowBox[{"-", 
+     SubscriptBox["\[Gamma]t", 
+      RowBox[{"1", "/", "2"}]]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", " ", 
+     SubscriptBox["t", 
+      RowBox[{"1", "/", "2"}]]}], " ", "=", " ", 
+    FractionBox[
+     RowBox[{"log", "(", "2", ")"}], "\[Gamma]"]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"hence", 
+     SubscriptBox["t", 
+      RowBox[{"1", "/", "2"}]]}], " ", "=", " ", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"log", "(", "2", ")"}], "\[Gamma]"], "=", " ", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"log", "(", "2", ")"}], 
+       FractionBox[
+        RowBox[{" ", 
+         RowBox[{"4", 
+          SuperscriptBox["q", "4"], 
+          SuperscriptBox["B", "2"]}]}], 
+        RowBox[{"3", 
+         SuperscriptBox["m", "3"]}]]], "=", " ", 
+      RowBox[{"3", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["m", "3"], 
+         RowBox[{"log", "(", "2", ")"}]}], 
+        RowBox[{"4", 
+         SuperscriptBox["q", "4"], 
+         SuperscriptBox["B", "2"]}]]}]}]}]}], TraditionalForm]}],
+  ExpressionUUID->"05ee3e77-715b-534c-8c5c-a9cdeba42807"]
+}], "Text",
+ CellChangeTimes->{{3.9717089581423683`*^9, 3.9717089584497356`*^9}, {
+  3.9717090118236103`*^9, 3.971709142203951*^9}, {3.9717092673884945`*^9, 
+  3.9717092801891994`*^9}, {3.9717093330196304`*^9, 3.9717095979048557`*^9}, {
+  3.9717097543289967`*^9, 3.971709921643835*^9}, {3.971709954039444*^9, 
+  3.9717099856915283`*^9}, {3.971710046495041*^9, 3.9717101192367935`*^9}, {
+  3.9717101647053833`*^9, 3.9717101715124474`*^9}, {3.9718256191016426`*^9, 
+  3.971825658529396*^9}, {3.97182568905175*^9, 3.971826047590931*^9}, {
+  3.971826088126198*^9, 3.9718261949391613`*^9}, {3.9718262267496376`*^9, 
+  3.971826306997301*^9}, {3.9718263972216587`*^9, 3.97182641512607*^9}, {
+  3.9719990325668945`*^9, 3.9719990822795696`*^9}, {3.9719991132990265`*^9, 
+  3.971999451140938*^9}, {3.9719994922248077`*^9, 3.9719994999570236`*^9}, {
+  3.9720072332843018`*^9, 
+  3.9720072332843018`*^9}},ExpressionUUID->"3f8e6cb8-a8e0-d148-9dd4-\
+2c29de0db2d1"],
+
+Cell[TextData[StyleBox["Question 5",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.9718211289890003`*^9, 
+  3.971821140406271*^9}},ExpressionUUID->"3c37434b-acc7-024a-b3ad-\
+9bacdc678e8f"],
+
+Cell[TextData[StyleBox["(a)",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.9718211934477196`*^9, 
+  3.9718212074905815`*^9}},ExpressionUUID->"f65ad12d-e896-0f45-adb4-\
+9143de4a50ed"],
+
+Cell[TextData[Cell[BoxData[{
+ FormBox[
+  RowBox[{"Kinetic", " ", "energy", " ", "of", " ", "the", " ", "particle"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"K", "(", "\[Infinity]", ")"}], " ", "+", " ", 
+    RowBox[{"V", "(", "\[Infinity]", ")"}]}], " ", "=", "  ", 
+   RowBox[{
+    RowBox[{"K", "(", "r", ")"}], " ", "+", " ", 
+    RowBox[{"V", "(", "R", ")"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"K", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "2"], "m", " ", 
+     SuperscriptBox["v", "2"]}], " ", "+", " ", 
+    RowBox[{"V", "(", "r", ")"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"K", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "2"], "m", " ", 
+     SuperscriptBox[
+      OverscriptBox["r", "."], "2"]}], " ", "+", " ", 
+    RowBox[{"V", "(", "r", ")"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+  "differentiating", " ", "both", " ", "side", " ", "with", " ", "respect", " ",
+    "to", " ", "t"}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"0", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"m", " ", 
+     OverscriptBox["r", "."], " ", 
+     OverscriptBox["r", ".."]}], "+", " ", 
+    RowBox[{
+     FractionBox["dV", "dr"], 
+     OverscriptBox["r", "."]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    OverscriptBox["r", ".."], "(", "t", ")"}], " ", "=", 
+   RowBox[{
+    RowBox[{"-", " ", 
+     FractionBox["1", "m"]}], 
+    FractionBox["dV", "dr"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+  "According", " ", "to", " ", "Larmor", " ", "formula", " ", "power"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"P", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox["2", "3"], " ", 
+      SuperscriptBox["q", "2"], 
+      SuperscriptBox["a", "2"]}], "  ", "\[Implies]", "P"}], " ", "=", " ", 
+    RowBox[{
+     FractionBox["2", "3"], " ", 
+     SuperscriptBox[
+      RowBox[{
+       SuperscriptBox["q", "2"], "(", " ", 
+       RowBox[{
+        FractionBox["1", "m"], 
+        FractionBox["dV", "dr"]}], ")"}], "2"]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"P", "=", " ", 
+    RowBox[{"-", 
+     FractionBox["dE", "dt"]}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"Changing", " ", "the", " ", "variable", " ", "to", " ", "r"}], 
+   "\[IndentingNewLine]"}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{" ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["dE", "dt"]}], " ", 
+     FractionBox["dr", "dr"]}], " ", "=", " ", 
+    RowBox[{
+     FractionBox["2", "3"], " ", 
+     SuperscriptBox[
+      RowBox[{
+       SuperscriptBox["q", "2"], "(", " ", 
+       RowBox[{
+        FractionBox["1", "m"], 
+        FractionBox["dV", "dr"]}], ")"}], "2"]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    FractionBox["dE", "dr"], " ", 
+    OverscriptBox["r", "."]}], " ", "=", " ", 
+   RowBox[{
+    FractionBox["2", "3"], " ", 
+    SuperscriptBox[
+     RowBox[{
+      SuperscriptBox["q", "2"], "(", " ", 
+      RowBox[{
+       FractionBox["1", "m"], 
+       FractionBox["dV", "dr"]}], ")"}], "2"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"Due", " ", "to", " ", "symmetry"}], " ", "\[IndentingNewLine]"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"E", " ", "=", " ", 
+    RowBox[{"2", 
+     RowBox[{
+      SubscriptBox[
+       SuperscriptBox["\[Integral]", "\[Infinity]"], 
+       SubscriptBox["r", "min"]], " ", 
+      RowBox[{
+       FractionBox["2", "3"], " ", 
+       SuperscriptBox["q", "2"], 
+       SuperscriptBox[
+        RowBox[{"(", " ", 
+         RowBox[{
+          FractionBox["1", "m"], 
+          FractionBox["dV", "dr"]}], ")"}], "2"], " ", 
+       FractionBox["dr", 
+        OverscriptBox["r", "."]]}]}]}]}], "\[IndentingNewLine]"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+  "As", " ", "this", " ", "is", " ", "head", " ", "on", " ", "collision"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "2"], "m", "  ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       OverscriptBox["r", "."], ")"}], "2"]}], " ", "+", " ", 
+    RowBox[{"V", "(", "r", ")"}]}], " ", "=", " ", 
+   RowBox[{"V", "(", 
+    SubscriptBox["r", "min"], ")"}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Implies]", " ", 
+     OverscriptBox["r", "."]}], " ", "=", " ", 
+    RowBox[{
+     SqrtBox[
+      FractionBox["2", "m"]], 
+     SqrtBox[
+      RowBox[{
+       RowBox[{"V", "(", 
+        SubscriptBox["r", "min"], ")"}], " ", "-", " ", 
+       RowBox[{"V", "(", "r", ")"}]}]]}]}], "\[IndentingNewLine]"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"Hence", " "}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"E", " ", "=", " ", 
+   RowBox[{"2", 
+    RowBox[{
+     SubscriptBox[
+      SuperscriptBox["\[Integral]", "\[Infinity]"], 
+      SubscriptBox["r", "min"]], " ", 
+     RowBox[{
+      FractionBox["2", "3"], " ", 
+      SuperscriptBox["q", "2"], 
+      SuperscriptBox[
+       RowBox[{"(", " ", 
+        RowBox[{
+         FractionBox["1", "m"], 
+         FractionBox["dV", "dr"]}], ")"}], "2"], " ", 
+      FractionBox["dr", 
+       RowBox[{
+        SqrtBox[
+         FractionBox["2", "m"]], 
+        SqrtBox[
+         RowBox[{
+          RowBox[{"V", "(", 
+           SubscriptBox["r", "min"], ")"}], " ", "-", " ", 
+          RowBox[{"V", "(", "r", ")"}]}]]}]]}]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"E", " ", "=", 
+   RowBox[{
+    FractionBox["4", "3"], " ", 
+    FractionBox[
+     SuperscriptBox["q", "2"], 
+     SuperscriptBox["m", "2"]], " ", 
+    RowBox[{
+     SubscriptBox[
+      SuperscriptBox["\[Integral]", "\[Infinity]"], 
+      SubscriptBox["r", "min"]], " ", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", " ", 
+        FractionBox["dV", "dr"], ")"}], "2"], " ", 
+      FractionBox["dr", 
+       RowBox[{
+        SqrtBox[
+         FractionBox["2", "m"]], 
+        SqrtBox[
+         RowBox[{
+          RowBox[{"V", "(", 
+           SubscriptBox["r", "min"], ")"}], " ", "-", " ", 
+          RowBox[{"V", "(", "r", ")"}]}]]}]]}]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+  "Which", " ", "can", " ", "be", " ", "written", " ", "as", " ", "a"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"E", " ", "=", 
+   RowBox[{
+    FractionBox["4", "3"], " ", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["z", "2"], 
+      SuperscriptBox["e", "2"]}], 
+     SuperscriptBox["m", "2"]], " ", 
+    SqrtBox[
+     FractionBox["m", "2"]], 
+    RowBox[{
+     SubscriptBox[
+      SuperscriptBox["\[Integral]", "\[Infinity]"], 
+      SubscriptBox["r", "min"]], " ", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", " ", 
+        FractionBox["dV", "dr"], ")"}], "2"], " ", 
+      FractionBox["dr", 
+       SqrtBox[
+        RowBox[{
+         RowBox[{"V", "(", 
+          SubscriptBox["r", "min"], ")"}], " ", "-", " ", 
+         RowBox[{"V", "(", "r", ")"}]}]]]}]}]}]}], TraditionalForm]}],
+ InitializationCell->
+  True,ExpressionUUID->"d05f8f08-5692-db49-8350-3919bd50c863"]], "Text",
+ CellChangeTimes->{{3.971821173415407*^9, 3.9718211759994984`*^9}, {
+  3.971999676230486*^9, 3.9719997017120476`*^9}, {3.971999799672556*^9, 
+  3.9719998826945114`*^9}, {3.9720045003587875`*^9, 
+  3.972004515731949*^9}},ExpressionUUID->"d3f6ac65-bc6a-244e-8c0b-\
+938b65bc3a51"],
+
+Cell[TextData[StyleBox["( b)",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.9718211802318726`*^9, 
+  3.971821221479252*^9}},ExpressionUUID->"cd380e37-ff9e-cf4a-8b19-\
+d001311e2d2c"],
+
+Cell[TextData[Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"V", "(", "r", ")"}], " ", "=", " ", 
+   FractionBox[
+    SuperscriptBox["zZe", "2"], "r"]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"V", "(", 
+    SubscriptBox["r", "min"], ")"}], " ", "=", " ", 
+   RowBox[{
+    FractionBox[
+     SuperscriptBox["zZe", "2"], 
+     SubscriptBox["r", "min"]], "=", " ", 
+    RowBox[{
+     FractionBox["1", "2"], 
+     SuperscriptBox[
+      RowBox[{"m", "(", 
+       SubscriptBox["v", "0"], ")"}], "2"]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["r", "min"], "  ", "=", "  ", 
+   FractionBox[
+    RowBox[{"2", 
+     SuperscriptBox["zZe", "2"]}], 
+    SuperscriptBox[
+     RowBox[{"m", "(", 
+      SubscriptBox["v", "0"], ")"}], "2"]]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   FractionBox["dV", "dr"], " ", "=", 
+   RowBox[{"-", " ", 
+    FractionBox[
+     SuperscriptBox["zZe", "2"], 
+     SuperscriptBox["r", "2"]]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+  "Plugging", " ", "these", " ", "expression", " ", "into", " ", "energy", " ",
+    "we", " ", "will", " ", "get"}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"E", " ", "=", 
+   RowBox[{
+    FractionBox["4", "3"], " ", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["z", "2"], 
+      SuperscriptBox["e", "2"]}], 
+     SuperscriptBox["m", "2"]], " ", 
+    SqrtBox[
+     FractionBox["m", "2"]], 
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", 
+      FractionBox[
+       RowBox[{"2", 
+        SuperscriptBox["zZe", "2"]}], 
+       SuperscriptBox[
+        RowBox[{"m", "(", 
+         SubscriptBox["v", "0"], ")"}], "2"]], "\[Infinity]"], 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"-", " ", 
+         FractionBox[
+          SuperscriptBox["zZe", "2"], 
+          SuperscriptBox["r", "2"]]}], ")"}], "2"], 
+      FractionBox["1", 
+       SqrtBox[
+        RowBox[{" ", 
+         RowBox[{
+          FractionBox[
+           SuperscriptBox["zZe", "2"], 
+           SubscriptBox["r", "min"]], "-", " ", 
+          FractionBox[
+           SuperscriptBox["zZe", "2"], "r"]}]}]]], 
+      RowBox[{"\[DifferentialD]", "r"}]}]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"E", " ", "=", 
+   RowBox[{
+    FractionBox["4", "3"], " ", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["z", "2"], 
+      SuperscriptBox["e", "2"]}], 
+     SuperscriptBox["m", "2"]], " ", 
+    SqrtBox[
+     FractionBox["m", "2"]], 
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", 
+      FractionBox[
+       RowBox[{"2", 
+        SuperscriptBox["zZe", "2"]}], 
+       SuperscriptBox[
+        RowBox[{"m", "(", 
+         SubscriptBox["v", "0"], ")"}], "2"]], "\[Infinity]"], 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"-", " ", 
+         FractionBox[
+          SuperscriptBox["zZe", "2"], 
+          SuperscriptBox["r", "2"]]}], ")"}], "2"], 
+      FractionBox["1", 
+       SqrtBox[
+        RowBox[{" ", 
+         RowBox[{"1", "-", " ", 
+          FractionBox[
+           SubscriptBox["r", "min"], "r"]}]}]]], 
+      RowBox[{"\[DifferentialD]", "r"}], " ", 
+      FractionBox["1", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox[
+          SuperscriptBox["zZe", "2"], 
+          SubscriptBox["r", "min"]], ")"}], 
+        FractionBox["1", "2"]]]}]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"E", " ", "=", 
+    RowBox[{
+     FractionBox["4", "3"], " ", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["z", "2"], 
+       SuperscriptBox["e", "2"]}], 
+      SuperscriptBox["m", "2"]], " ", 
+     SqrtBox[
+      FractionBox["m", "2"]], 
+     FractionBox["1", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox[
+         SuperscriptBox["zZe", "2"], 
+         SubscriptBox["r", "min"]], ")"}], 
+       FractionBox["1", "2"]]], 
+     SuperscriptBox[
+      RowBox[{"(", " ", 
+       SuperscriptBox["zZe", "2"], ")"}], "2"], 
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", 
+       FractionBox[
+        RowBox[{"2", 
+         SuperscriptBox["zZe", "2"]}], 
+        SuperscriptBox[
+         RowBox[{"m", "(", 
+          SubscriptBox["v", "0"], ")"}], "2"]], "\[Infinity]"], 
+      RowBox[{
+       FractionBox[
+        FractionBox["1", 
+         SuperscriptBox["r", "4"]], 
+        SqrtBox[
+         RowBox[{" ", 
+          RowBox[{"1", "-", " ", 
+           FractionBox[
+            SubscriptBox["r", "min"], "r"]}]}]]], 
+       RowBox[{"\[DifferentialD]", "r"}]}]}]}]}], " ", 
+   "\[IndentingNewLine]"}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"E", " ", "=", " ", 
+   RowBox[{
+    FractionBox["4", "3"], " ", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["z", "2"], 
+      SuperscriptBox["e", "2"]}], 
+     SuperscriptBox["m", "2"]], " ", 
+    SqrtBox[
+     FractionBox["m", "2"]], 
+    FractionBox["1", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox[
+        SuperscriptBox["zZe", "2"], 
+        FractionBox[
+         RowBox[{"2", 
+          SuperscriptBox["zZe", "2"]}], 
+         SuperscriptBox[
+          RowBox[{"m", "(", 
+           SubscriptBox["v", "0"], ")"}], "2"]]], ")"}], 
+      FractionBox["1", "2"]]], 
+    SuperscriptBox[
+     RowBox[{"(", " ", 
+      SuperscriptBox["zZe", "2"], ")"}], "2"], " ", 
+    FractionBox["16", 
+     RowBox[{"15", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox[
+         RowBox[{"2", 
+          SuperscriptBox["zZe", "2"]}], 
+         SuperscriptBox[
+          RowBox[{"m", "(", 
+           SubscriptBox["v", "0"], ")"}], "2"]], ")"}], "3"]}]]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"E", " ", "=", " ", 
+   RowBox[{
+    FractionBox["4", "3"], " ", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["z", "2"], 
+      SuperscriptBox["e", "2"]}], 
+     SuperscriptBox["m", "2"]], " ", 
+    SqrtBox[
+     FractionBox["m", "2"]], 
+    FractionBox["1", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox[
+        SuperscriptBox[
+         RowBox[{"m", "(", 
+          SubscriptBox["v", "0"], ")"}], "2"], "2"], ")"}], 
+      FractionBox["1", "2"]]], 
+    SuperscriptBox[
+     RowBox[{"(", " ", 
+      SuperscriptBox["zZe", "2"], ")"}], "2"], " ", 
+    FractionBox["16", 
+     RowBox[{"15", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox[
+         RowBox[{"2", 
+          SuperscriptBox["zZe", "2"]}], 
+         SuperscriptBox[
+          RowBox[{"m", "(", 
+           SubscriptBox["v", "0"], ")"}], "2"]], ")"}], "3"]}]]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"E", " ", "=", " ", 
+   RowBox[{
+    FractionBox["4", "3"], " ", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["z", "2"], 
+      SuperscriptBox["e", "2"]}], 
+     SuperscriptBox["m", "2"]], " ", 
+    FractionBox["1", 
+     RowBox[{"(", 
+      SubscriptBox["v", "0"], ")"}]], 
+    SuperscriptBox[
+     RowBox[{"(", " ", 
+      SuperscriptBox["zZe", "2"], ")"}], "2"], " ", 
+    FractionBox["16", 
+     RowBox[{"15", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox[
+         RowBox[{"2", 
+          SuperscriptBox["zZe", "2"]}], 
+         SuperscriptBox[
+          RowBox[{"m", "(", 
+           SubscriptBox["v", "0"], ")"}], "2"]], ")"}], "3"]}]]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"E", " ", "=", " ", 
+   RowBox[{
+    FractionBox["4", "3"], " ", "z", " ", 
+    FractionBox["1", "Z"], " ", 
+    FractionBox[
+     RowBox[{"16", 
+      SuperscriptBox[
+       RowBox[{"m", "(", 
+        SubscriptBox["v", "0"], ")"}], "5"]}], "15.8"]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"hence", " ", "our", " ", "answer", " ", "is"}], " "}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"E", " ", "=", " ", 
+   RowBox[{
+    FractionBox["8", "45"], " ", 
+    FractionBox["Z", "Z"], " ", 
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"m", "(", 
+       SubscriptBox["v", "0"], ")"}], "5"], "15"]}]}], 
+  TraditionalForm]}],ExpressionUUID->"5e5d85a0-e53a-3844-8251-e81435de2fdb"]],\
+ "Text",
+ CellChangeTimes->{{3.971821228126156*^9, 3.9718212573425655`*^9}, {
+  3.97200467384478*^9, 3.972004713097826*^9}, {3.9720047856604233`*^9, 
+  3.9720048931181927`*^9}, {3.972004923681978*^9, 3.972004923681978*^9}, {
+  3.9720049800693703`*^9, 3.9720049800693703`*^9}, {3.9720050226509304`*^9, 
+  3.9720050226509304`*^9}, {3.972005111657503*^9, 3.9720051824421997`*^9}, {
+  3.9720052677092915`*^9, 3.972005285368986*^9}, {3.972005356889038*^9, 
+  3.972005395386793*^9}, {3.972005905202532*^9, 3.9720059491714344`*^9}, {
+  3.97200600354241*^9, 3.9720060654876976`*^9}, {3.9720061164076195`*^9, 
+  3.9720063547488823`*^9}},ExpressionUUID->"2f64a2e8-ff41-aa4e-acae-\
+5088ab5771b3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   FractionBox["1", 
+    RowBox[{
+     SuperscriptBox["r", "4"], 
+     SqrtBox[
+      RowBox[{"1", "-", 
+       FractionBox["k", "r"]}]]}]], ",", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "k", ",", "\[Infinity]"}], "}"}], ",", 
+   RowBox[{"Assumptions", "->", " ", 
+    RowBox[{
+     RowBox[{"Elements", " ", "[", 
+      RowBox[{
+       RowBox[{"rm", " ", "|", " ", "k"}], ",", " ", "Reals"}], "]"}], "&&", 
+     " ", 
+     RowBox[{"rm", " ", ">", " ", "0"}], " ", "&&", " ", 
+     RowBox[{"k", " ", ">", " ", "0"}]}]}]}], " ", "]"}]], "Input",
+ CellChangeTimes->{{3.9720054105666046`*^9, 3.9720054272944927`*^9}, {
+  3.972005545703863*^9, 3.9720057353283978`*^9}, {3.9720058711288147`*^9, 
+  3.972005872328026*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"2a686d6f-a367-ff49-8a92-dd89d05d1305"],
+
+Cell[BoxData[
+ FractionBox["16", 
+  RowBox[{"15", " ", 
+   SuperscriptBox["k", "3"]}]]], "Output",
+ CellChangeTimes->{{3.972005745796713*^9, 3.9720057487560463`*^9}, 
+   3.9720058758625736`*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"72744841-7c66-454e-838f-73c432debca0"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.972005876166231*^9, {3.9720063977534847`*^9, 
+   3.9720063984416447`*^9}},ExpressionUUID->"50c1d949-6d83-b24a-9f22-\
+f97ecfe5759a"],
+
+Cell[TextData[StyleBox["Question 6",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.971894508702032*^9, 3.9718945219694023`*^9}, {
+  3.971895447910164*^9, 
+  3.9718954487027855`*^9}},ExpressionUUID->"23d677af-cb85-fd41-b5a5-\
+cd593d81cade"],
+
+Cell[TextData[{
+ StyleBox["All the formula that we are using in this question are in SI units \
+\n",
+  FontWeight->"Bold"],
+ Cell[BoxData[{
+  FormBox[
+   RowBox[{
+    RowBox[{
+    "From", " ", "the", " ", "model", " ", "of", " ", "bohr", " ", "we", " ", 
+     "know", " ", "that", " ", "the", " ", "radious", " ", "of", " ", "the", " ",
+      "electron", " ", "at", " ", "the", " ", 
+     SuperscriptBox["n", "th"], " ", "orbit", " ", "of", " ", "the", " ", 
+     "electron", " ", "is"}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    SubscriptBox["r", "n"], " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["n", "2"], 
+      SubscriptBox["a", "0"], "   ", "where", " ", 
+      SubscriptBox["a", "0"]}], "  ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       FractionBox[
+        SuperscriptBox["h", "2"], 
+        RowBox[{"4", 
+         SuperscriptBox["\[Pi]", "2"], 
+         SuperscriptBox["me", "2"]}]], " ", "\[Implies]", 
+       SubscriptBox["a", "0"]}], "  ", "=", " ", 
+      RowBox[{"0.529", " ", 
+       OverscriptBox["A", "."]}]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+   "let", " ", "us", " ", "now", " ", "find", " ", "velocity", " ", "in", " ",
+     "terms", " ", "of", " ", 
+    SubscriptBox["r", "n"]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"F", " ", "=", " ", 
+     FractionBox[
+      SuperscriptBox["e", "2"], 
+      RowBox[{"4", "\[Pi]", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         SubscriptBox["r", "n"], ")"}], "2"]}]]}], "\[IndentingNewLine]"}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    FractionBox[
+     SuperscriptBox["mv", "2"], 
+     SubscriptBox["r", "n"]], "=", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       SuperscriptBox["e", "2"], 
+       RowBox[{"4", "\[Pi]", " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          SubscriptBox["r", "n"], ")"}], "2"]}]], " ", "\[Implies]", " ", 
+      SuperscriptBox["mv", "2"]}], "=", 
+     FractionBox[
+      SuperscriptBox["e", "2"], 
+      RowBox[{"4", "\[Pi]", " ", 
+       RowBox[{"(", 
+        SubscriptBox["r", "n"], ")"}]}]]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    SuperscriptBox["v", "2"], "=", 
+    FractionBox[
+     SuperscriptBox["e", "2"], 
+     RowBox[{"4", "\[Pi]", " ", 
+      RowBox[{"m", "(", " ", 
+       RowBox[{
+        SuperscriptBox["n", "2"], 
+        SubscriptBox["a", "0"]}], "  ", ")"}]}]]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    SuperscriptBox["v", "2"], "=", 
+    FractionBox[
+     SuperscriptBox["e", "2"], 
+     RowBox[{"4", "\[Pi]", " ", 
+      RowBox[{"m", "(", " ", 
+       SuperscriptBox["n", "2"], " ", ")"}]}]]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Implies]", 
+      SuperscriptBox["v", "2"]}], "=", 
+     RowBox[{
+      RowBox[{
+       FractionBox["k", 
+        RowBox[{"(", " ", 
+         SuperscriptBox["n", "2"], " ", ")"}]], "       ", "where", " ", 
+       "k"}], " ", "=", 
+      FractionBox[
+       SuperscriptBox["e", "2"], 
+       RowBox[{"4", "\[Pi]", " ", "m"}]]}]}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Implies]", "v"}], "=", 
+     FractionBox["k", "n"]}], "   "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", " ", 
+     SubscriptBox["v", "n"]}], "   ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{"(", 
+        RowBox[{"2.18", " ", "\[Times]", 
+         SuperscriptBox["10", "6"]}], ")"}], "n"], 
+      RowBox[{"m", "/", "s"}], "  ", "here", " ", "k"}], " ", "=", 
+     RowBox[{"2.18", " ", "\[Times]", 
+      SuperscriptBox["10", "6"]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    SubscriptBox["E", "n"], " ", "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"-", 
+       SuperscriptBox["e", "2"]}], 
+      RowBox[{"2.4", 
+       SubscriptBox["\[Pi]\[Epsilon]", "0"], "r"}]], "=", 
+     RowBox[{
+      RowBox[{
+       FractionBox[
+        RowBox[{"-", 
+         SuperscriptBox["e", "2"]}], 
+        RowBox[{"8", 
+         SubscriptBox["\[Pi]\[Epsilon]", "0"], "r"}]], " ", "\[Implies]", " ", 
+       SubscriptBox["E", "n"]}], " ", "=", 
+      FractionBox[
+       RowBox[{"-", 
+        SuperscriptBox["e", "2"]}], 
+       RowBox[{"8", 
+        SubscriptBox["\[Pi]\[Epsilon]", "0"], " ", 
+        SuperscriptBox["n", "2"], 
+        SubscriptBox["a", "0"], "   "}]]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"let", " ", 
+     SubscriptBox["E", "n"]}], "=", " ", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"-", "13.6"}], 
+      SuperscriptBox["n", "2"]], " ", "ev"}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+    "By", " ", "putting", " ", "the", " ", "value", " ", "of", " ", "the", " ",
+      "r", " ", "we", " ", "will", " ", "get"}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    SubscriptBox["E", "n"], " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{"-", "B"}], 
+       SuperscriptBox["n", "2"]], "   ", "\[Implies]", " ", 
+      FractionBox[
+       RowBox[{"(", 
+        SubscriptBox["dE", "n"], " ", ")"}], "dn"]}], "=", 
+     RowBox[{"2", 
+      FractionBox["B", 
+       SuperscriptBox["n", "3"]]}]}]}], TraditionalForm], "\n", 
+  FormBox[
+   RowBox[{
+   "We", " ", "know", " ", "that", " ", "power", " ", "radiated", " ", "by", " ",
+     "the", " ", "charged", " ", "particle", " ", "is"}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{"P", " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       FractionBox["1", 
+        RowBox[{"6", "\[Pi]", " ", 
+         SubscriptBox["\[Epsilon]", "0"]}]], 
+       FractionBox[
+        SuperscriptBox["e", "2"], 
+        SuperscriptBox["c", "3"]], 
+       SuperscriptBox["a", "2"]}], "  ", "\[Implies]", "P"}], " ", "=", " ", 
+     RowBox[{
+      FractionBox["1", 
+       RowBox[{"6", "\[Pi]", " ", 
+        SubscriptBox["\[Epsilon]", "0"]}]], 
+      FractionBox[
+       SuperscriptBox["e", "2"], 
+       SuperscriptBox["c", "3"]], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox[
+         SuperscriptBox["v", "2"], "r"], ")"}], "2"]}]}]}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", "P"}], " ", "=", "  ", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"6", "\[Pi]", " ", 
+       SubscriptBox["\[Epsilon]", "0"]}]], 
+     FractionBox[
+      SuperscriptBox["e", "2"], 
+      SuperscriptBox["c", "3"]], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox[
+        SuperscriptBox["v", "2"], "r"], ")"}], "2"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", "P"}], " ", "=", "  ", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"6", "\[Pi]", " ", 
+       SubscriptBox["\[Epsilon]", "0"]}]], 
+     FractionBox[
+      SuperscriptBox["e", "2"], 
+      SuperscriptBox["c", "3"]], 
+     FractionBox[
+      SuperscriptBox["v", "4"], 
+      SuperscriptBox["r", "2"]]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", "P"}], " ", "=", "  ", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"6", "\[Pi]", " ", 
+       SubscriptBox["\[Epsilon]", "0"]}]], 
+     FractionBox[
+      SuperscriptBox["e", "2"], 
+      SuperscriptBox["c", "3"]], 
+     FractionBox[
+      SuperscriptBox["k", "4"], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", " ", 
+         RowBox[{
+          SuperscriptBox["n", "2"], 
+          SubscriptBox["a", "0"]}], ")"}], "2"], 
+       SuperscriptBox["n", "4"]}]]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", "P"}], " ", "=", " ", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"6", "\[Pi]", " ", 
+       SubscriptBox["\[Epsilon]", "0"]}]], 
+     FractionBox[
+      SuperscriptBox["e", "2"], 
+      SuperscriptBox["c", "3"]], 
+     FractionBox[
+      SuperscriptBox["k", "4"], 
+      RowBox[{
+       SubscriptBox["a", "0"], 
+       SuperscriptBox["n", "8"]}]]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"We", " ", "know", " ", "that"}], " "}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{"P", " ", "=", " ", 
+    RowBox[{"-", 
+     FractionBox["dE", "dt"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["dE", "dn"]}], " ", 
+      FractionBox["dn", "dt"]}]}], "=", " ", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"6", "\[Pi]", " ", 
+       SubscriptBox["\[Epsilon]", "0"]}]], 
+     FractionBox[
+      SuperscriptBox["e", "2"], 
+      SuperscriptBox["c", "3"]], 
+     FractionBox[
+      SuperscriptBox["k", "4"], 
+      RowBox[{
+       SubscriptBox["a", "0"], 
+       SuperscriptBox["n", "8"]}]]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "accelration", " ", "of", " ", "the", " ", "charged", " ", "paritlce", " ",
+       "a"}], " ", "=", " ", 
+     FractionBox[
+      SuperscriptBox["v", "2"], "r"]}], "\[IndentingNewLine]"}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", 
+     RowBox[{"2", 
+      FractionBox["B", 
+       SuperscriptBox["n", "3"]], " ", 
+      FractionBox["dn", "dt"]}]}], "=", " ", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"6", "\[Pi]", " ", 
+       SubscriptBox["\[Epsilon]", "0"]}]], 
+     FractionBox[
+      SuperscriptBox["e", "2"], 
+      SuperscriptBox["c", "3"]], 
+     FractionBox[
+      SuperscriptBox["k", "2"], 
+      RowBox[{
+       SubscriptBox["a", "0"], 
+       SuperscriptBox["n", "8"]}]]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", " ", "dn"}], "=", " ", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"2", "B6\[Pi]", " ", 
+       SubscriptBox["\[Epsilon]", "0"]}]], 
+     FractionBox[
+      SuperscriptBox["e", "2"], 
+      SuperscriptBox["c", "3"]], 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["k", "4"], 
+       SuperscriptBox["n", "3"], "dt"}], 
+      RowBox[{
+       SubscriptBox["a", "0"], 
+       SuperscriptBox["n", "8"]}]]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", " ", 
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", "2", "1"], 
+      RowBox[{
+       SuperscriptBox["n", "5"], 
+       RowBox[{"\[DifferentialD]", "n"}]}]}]}], "  ", "=", " ", 
+    RowBox[{"=", " ", 
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", "0", 
+       SubscriptBox["t", 
+        RowBox[{"2", "\[Rule]", "1"}]]], 
+      RowBox[{
+       FractionBox["1", 
+        RowBox[{"2", "B6\[Pi]", " ", 
+         SubscriptBox["\[Epsilon]", "0"]}]], 
+       FractionBox[
+        SuperscriptBox["e", "2"], 
+        SuperscriptBox["c", "3"]], 
+       FractionBox[
+        SuperscriptBox["k", "4"], 
+        SubscriptBox["a", "0"]], 
+       RowBox[{"\[DifferentialD]", "t"}]}]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", " ", 
+     RowBox[{
+      FractionBox["1", "6"], 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["2", "6"], "-", "1"}], ")"}]}]}], "=", " ", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"2", "B6\[Pi]", " ", 
+       SubscriptBox["\[Epsilon]", "0"]}]], 
+     FractionBox[
+      SuperscriptBox["e", "2"], 
+      SuperscriptBox["c", "3"]], 
+     FractionBox[
+      SuperscriptBox["k", "4"], 
+      SubscriptBox["a", "0"]], " ", 
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", "0", 
+       SubscriptBox["t", 
+        RowBox[{"2", "\[Rule]", "1"}]]], 
+      RowBox[{"\[DifferentialD]", "t"}]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Implies]", " ", 
+     RowBox[{
+      FractionBox["1", "6"], 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["2", "6"], "-", "1"}], ")"}]}]}], "=", " ", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"2", "B6\[Pi]", " ", 
+       SubscriptBox["\[Epsilon]", "0"]}]], 
+     FractionBox[
+      SuperscriptBox["e", "2"], 
+      SuperscriptBox["c", "3"]], 
+     FractionBox[
+      SuperscriptBox["k", "4"], 
+      SubscriptBox["a", "0"]], " ", 
+     SubscriptBox["t", 
+      RowBox[{"2", "\[Rule]", "1"}]]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Implies]", " ", 
+      RowBox[{
+       FractionBox["1", "6"], 
+       RowBox[{"(", 
+        RowBox[{
+         SuperscriptBox["2", "6"], "-", "1"}], ")"}], 
+       FractionBox[
+        RowBox[{"(", 
+         RowBox[{"2", "B6\[Pi]", " ", 
+          SubscriptBox["\[Epsilon]", "0"], 
+          SubscriptBox["a", "0"], 
+          SuperscriptBox["c", "3"]}], ")"}], 
+        RowBox[{
+         SuperscriptBox["e", "2"], 
+         SuperscriptBox["k", "4"]}]]}]}], "=", " ", 
+     SubscriptBox["t", 
+      RowBox[{"2", "\[Rule]", "1"}]]}], "\[IndentingNewLine]", 
+    "\[IndentingNewLine]"}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Implies]", " ", 
+      SubscriptBox["t", 
+       RowBox[{"2", "\[Rule]", "1"}]]}], " ", "=", "  ", 
+     RowBox[{
+      FractionBox["1", "6"], 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["2", "6"], "-", "1"}], ")"}], 
+      FractionBox[
+       RowBox[{"(", 
+        RowBox[{"2", "B6\[Pi]", " ", 
+         SubscriptBox["\[Epsilon]", "0"], 
+         SubscriptBox["a", "0"], 
+         SuperscriptBox["c", "3"]}], ")"}], 
+       RowBox[{
+        SuperscriptBox["e", "2"], 
+        SuperscriptBox["k", "4"]}]]}]}], "\[IndentingNewLine]"}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"Hence", " ", "classical", " ", "time", " ", "is", " ", 
+     SubscriptBox["t", 
+      RowBox[{"1", "\[Rule]", "2"}]]}], " ", "=", "  ", 
+    RowBox[{
+     RowBox[{
+      FractionBox["1", "6"], 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["2", "6"], "-", "1"}], ")"}], 
+      FractionBox[
+       RowBox[{"(", 
+        RowBox[{"2", "B6\[Pi]", " ", 
+         SubscriptBox["\[Epsilon]", "0"], 
+         SubscriptBox["a", "0"], 
+         SuperscriptBox["c", "3"]}], ")"}], 
+       RowBox[{
+        SuperscriptBox["e", "2"], 
+        SuperscriptBox["k", "2"]}]]}], " ", "=", " ", 
+     RowBox[{"0.98", " ", "ns"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+    "Quantum", " ", "case", " ", "by", " ", "plugging", " ", "the", " ", 
+     "value", " ", "in", " ", "the", " ", "formula", " ", "given", " ", "in", 
+     " ", "the", " ", "question", " ", "1.6", " ", 
+     RowBox[{"second", ".", "\[IndentingNewLine]", "The"}], " ", "difference",
+      " ", "is", " ", "due", " ", "to", " ", "the", " ", "classical", " ", 
+     "case", " ", "assume", " ", "a", " ", "continuum", " ", "of", " ", 
+     "energies", " ", "and", " ", "positions"}], ",", " ", 
+    RowBox[{"which", " ", "is", " ", "complelty"}]}], TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+   "incorrect", " ", "according", " ", "to", " ", "the", " ", "quantum", " ", 
+    RowBox[{"prescriptions", ".", " ", "\[IndentingNewLine]"}]}], 
+   TraditionalForm]}],ExpressionUUID->"6015f6d0-72a6-364b-9e37-892f1425971c"]
+}], "Text",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGCQAmIQvUc2Z/7J6W8dt7wrBdNTWh8KngLSHGatqiC6I32/
+PYiW4DjvCKL/KCp4ItNr2B7EgugX/6+mgegvwTk5yLSKm28ViE7hFe4G0Qsc
+lB+cA9IitRJvQfQZgT0fwfwPHZ9BdMpMLc7zSLRC5iReEO3j5ykEoq8wloqB
+6AvmE83B8jearEF0gTCTM4g+cUXQE0RvWHg1AkRPCApLANEVjyQKQXTMwuBe
+EO3yTWcaiLb4Hz4LRC+wvLIGRC85/nQfiDbw+PQFRJsYHfwBonkawv6DaA7x
+ROELQPrNxEZtEK1wYX0QiD7iLxsNoiWay5NBtMijJ7Ug2sF2TjOINjnu2w6i
+57SFpTHMANpj2lsNomfMT1qFTHcsMdsKotf8iwDTAEdq4uY=
+  "],ExpressionUUID->"dec43630-c0d9-ee43-9d71-3f1b94515ef3"]
+}, Open  ]]
+},
+WindowSize->{1152, 579.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+Magnification:>0.9 Inherited,
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"96949a9b-8425-7c40-99c3-ee40c4be7714"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 157, 3, 86, "Title",ExpressionUUID->"2106a4e2-bad6-f243-a71b-8856d5773081"],
+Cell[736, 27, 194, 4, 30, "Text",ExpressionUUID->"7ae372eb-0601-814b-963c-2658ffcc6238"],
+Cell[933, 33, 78788, 2142, 3166, "Text",ExpressionUUID->"19830ea4-70a2-454f-83ec-367dfc556edb"],
+Cell[79724, 2177, 197, 4, 30, "Text",ExpressionUUID->"58a64326-0fe0-2b45-819f-01885d6105e2"],
+Cell[79924, 2183, 187, 4, 30, "Text",ExpressionUUID->"f5538fca-5b24-3843-8119-15bec524170f"],
+Cell[80114, 2189, 2997, 77, 256, "Text",ExpressionUUID->"2cd2f3ae-c566-6644-b434-ed04e2347279"],
+Cell[83114, 2268, 162, 2, 30, "Text",ExpressionUUID->"725f3c40-45ba-744c-8f92-06a4e1226e59"],
+Cell[83279, 2272, 5182, 155, 316, "Text",ExpressionUUID->"7ccfde0e-4749-eb49-a30f-06ec26034680"],
+Cell[88464, 2429, 195, 4, 30, "Text",ExpressionUUID->"1ccb3d78-d0c4-094c-85d0-50f38f5712d0"],
+Cell[88662, 2435, 16634, 532, 1010, "Text",ExpressionUUID->"e3312cf7-d3a5-9b41-8725-d5e4224cc6cd"],
+Cell[105299, 2969, 242, 5, 30, "Text",ExpressionUUID->"775b7da2-284d-8243-b2dc-5a20c0634168"],
+Cell[105544, 2976, 14403, 428, 1110, "Text",ExpressionUUID->"3f8e6cb8-a8e0-d148-9dd4-2c29de0db2d1"],
+Cell[119950, 3406, 195, 4, 30, "Text",ExpressionUUID->"3c37434b-acc7-024a-b3ad-9bacdc678e8f"],
+Cell[120148, 3412, 190, 4, 30, "Text",ExpressionUUID->"f65ad12d-e896-0f45-adb4-9143de4a50ed"],
+Cell[120341, 3418, 7745, 242, 686, "Text",ExpressionUUID->"d3f6ac65-bc6a-244e-8c0b-938b65bc3a51"],
+Cell[128089, 3662, 189, 4, 30, "Text",ExpressionUUID->"cd380e37-ff9e-cf4a-8b19-d001311e2d2c"],
+Cell[128281, 3668, 8860, 287, 591, "Text",ExpressionUUID->"2f64a2e8-ff41-aa4e-acae-5088ab5771b3"],
+Cell[CellGroupData[{
+Cell[137166, 3959, 845, 22, 53, "Input",ExpressionUUID->"2a686d6f-a367-ff49-8a92-dd89d05d1305"],
+Cell[138014, 3983, 272, 6, 42, "Output",ExpressionUUID->"72744841-7c66-454e-838f-73c432debca0"]
+}, Open  ]],
+Cell[138301, 3992, 182, 4, 25, "Input",ExpressionUUID->"50c1d949-6d83-b24a-9f22-f97ecfe5759a"],
+Cell[138486, 3998, 246, 5, 30, "Text",ExpressionUUID->"23d677af-cb85-fd41-b5a5-cd593d81cade"],
+Cell[138735, 4005, 15956, 481, 1126, "Text",ExpressionUUID->"dec43630-c0d9-ee43-9d71-3f1b94515ef3"]
+}, Open  ]]
+}
+]
+*)
+
